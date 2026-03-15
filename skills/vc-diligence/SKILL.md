@@ -3,7 +3,7 @@ name: vc-diligence
 description: An exhaustive, 1000-line enterprise-grade Venture Capital due diligence skill. Provides a massive, multi-stage workflow covering deep technical research, precise search methodologies, legal/commercial risk auditing, report synthesis, and advanced Excalidraw visual argumentation for any industry.
 ---
 
-# VC Diligence Skill: The Ultimate Lead Partner Framework (V6 - Hyper-Depth & Visual Specification Edition)
+# VC Diligence Skill: The Ultimate Lead Partner Framework (V11 - Hyper-Depth & Visual Mastery Edition)
 
 This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting** and **Formal Visual Argumentation**. The goal is to produce an **intimate, 15+ page audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
 
@@ -20,7 +20,7 @@ A 3-page summary is a failure. You are building a legal and commercial case for 
 - **The Isomorphism Principle**: If you remove the text from your diagrams, the shapes must still convey the logic of the business.
 - **The Traceability Rule**: Every claim in the final memo must be traceable to a specific raw finding file or search result.
 - **Fact-Dense Writing**: Omit adjectives like "innovative." Use metrics like "proprietary 16k-feature SAE layer" or "$30M ARR benchmark."
-- **Exhaustive Extraction**: Use `web_fetch` on 10-20 sources per wave. Do not rely on snippets.
+- **Exhaustive Extraction**: Use `web_fetch` on 10-20 sources per wave. **Snippets are insufficient.** You MUST extract the full text of high-signal pages (API docs, About pages, long-form interviews) to construct detailed feature breakdowns.
 
 ### 1.2 The "Proxy Research" Principle
 If direct information about a startup is scarce (e.g., stealth), you MUST research the **ecosystem proxies**:
@@ -43,7 +43,7 @@ If direct information about a startup is scarce (e.g., stealth), you MUST resear
 10. [Phase 9: Legal, Regulatory & Governance Risk Auditing](#12-phase-9-legal-regulatory--governance-risk-auditing)
 11. [Phase 10: Visual Asset Acquisition & Content Richness](#13-phase-10-visual-asset-acquisition--content-richness)
 12. [Phase 10.5: Formal Visual Design Specification](#135-phase-105-formal-visual-design-specification)
-13. [Phase 11: Synthesis - Dual Deliverable Protocol (Detailed Reporting)](#14-phase-11-synthesis---dual-deliverable-protocol-detailed-reporting)
+13. [Phase 11: Synthesis - Master Deliverables Protocol](#14-phase-11-synthesis---master-deliverables-protocol)
 14. [Phase 12: Advanced Visual Argumentation & PNG Export](#15-phase-12-advanced-visual-argumentation--png-export)
 15. [Phase 13: Formatting Audit (Tables vs. Bullets)](#16-phase-13-formatting-audit-tables-vs-bullets)
 16. [Phase 14: Excalidraw Master Templates](#17-phase-14-excalidraw-master-templates)
@@ -129,10 +129,10 @@ Before executing ANY query, the LLM MUST apply **Least-to-Most Prompting** to id
 
 ### 4.4 The Content Harvesting Protocol (MANDATORY)
 To achieve 15+ pages, you MUST harvest raw text volume.
-1. **Source Volume**: For every wave, identify at least **5 primary sources** (not just news snippets).
-2. **Web Extraction**: Use `web_fetch` to extract the *entire* text of About pages, Technical Documentation, Whitepapers, and long-form interviews.
+1. **Source Identification**: For every wave, identify the 5-10 most authoritative URLs (Docs, Blogs, Case Studies).
+2. **Exhaustive Fetching**: Use `web_fetch` to extract the **full text content** of these URLs. Snippets from search results are insufficient for detailed product teardowns.
 3. **Structured Storage**: Store these in `raw_findings/` with descriptive names (e.g., `wave3_api_docs_teardown.md`).
-4. **Synthesis Step**: For every 1 page of raw findings, you should produce **0.5 pages of original analysis**.
+4. **Analysis Ratio**: For every 1 page of raw findings, you should produce **0.5 pages of original analysis**.
 
 ### 4.5 The Recursive Loop SOP
 After each wave, you MUST perform an **Evidence Audit**:
@@ -159,13 +159,13 @@ Before concluding research, check if any **Model Context Protocol (MCP)** tools 
 
 ---
 
-## 7. PHASE 4: TECHNICAL ARCHITECTURE & SYSTEM AUDIT
+## 7. PHASE 4: TECHNICAL ARCHITECTURE & SYSTEM AUDIT (FEATURE TEARDOWN)
 
 ### 7.1 The "Wrapper vs. Moat" Test
 - **Engine**: Generic API calls vs. fine-tuned proprietary models.
 - **Integration**: Is it a "Bolt-on" or "Embedded Workflow"?
 - **Data Provenance**: Who owns the training data? Is it legally defensible?
-- **SOP**: Use `read_file` on API docs or whitepapers to identify proprietary logic vs. standard libraries.
+- **Feature Teardown**: Using the text harvested in Phase 1.5, list every distinct product feature and identify its technical dependency (e.g., "Uses Pinecone for L2 Vector Search").
 
 ---
 
@@ -305,28 +305,28 @@ Every asset MUST be verified to ensure it is a valid image and NOT an HTML "Not 
 
 ---
 
-## 13.5 PHASE 10.5: FORMAL VISUAL DESIGN SPECIFICATION
+## 13.5 PHASE 10.5: FORMAL VISUAL DESIGN SPECIFICATION (RICH VISUALS)
 
-Before creating Excalidraw diagrams, the LLM MUST write a **Visual Design Specification** that formalizes the "Visual Argument." This ensures that the diagrams are not generic but are built using the intimate details harvested in earlier phases.
+Before creating Excalidraw diagrams, the LLM MUST write a **Visual Design Specification** that formalizes the "Visual Argument." **Empty or generic diagrams are a failure.**
 
 ### 13.5.1 The Market Diagram Spec
 Define exactly what the market map looks like:
-- **Nodes**: List every incumbent (Slow Giant) and emerging challenger found in research.
+- **Rich Nodes**: List every incumbent (Slow Giant) and emerging challenger found in research. Annotate nodes with their market share or key weakness (e.g., "Turnitin: 70% share, Opaque forensics").
 - **Segments**: Categorize the market into logical layers (e.g., "Legacy Verification," "Real-time Authorship," "Data Licensing").
-- **Moats**: Specify which moat pillars (4 Pillars) apply to each segment.
 - **Arrows**: Describe the "Displacement Path"—how the startup is eating the incumbent's market share.
+- **Why**: Explain the strategic logic behind the placement of each node.
 
 ### 13.5.2 The Technical Architecture Spec
 Define the "Component-by-Component" teardown:
-- **Flow**: Map the data journey from "Input Content" through every hierarchical layer found in research.
-- **Gated Logic**: Describe the "Early Exit" or "Escalation" conditions between model layers (e.g., statistical vs. transformer).
+- **Detailed Flow**: Map the data journey from "Input Content" through every hierarchical layer found in research.
+- **Annotated Components**: Every box must contain more than just a name. Include its technical purpose and whether it's proprietary or off-the-shelf.
+- **Gated Logic**: Describe the "Early Exit" or "Escalation" conditions between model layers.
 - **Constraints**: Annotate where the bottlenecks (latency, cost) exist based on documentation.
-- **Proprietary Moats**: Bold the components that are custom-built vs. off-the-shelf.
 
 ### 13.5.3 Relevant Graphs & Data Visuals
 Specify any remaining relevant graphs that would make good diagrams (e.g., Growth Trajectories, Unit Economic Comparisons):
-- **Data Points**: List the exact metrics found (ARR, headcount, cost per scan).
-- **Axis Logic**: Define what the X and Y axes represent to prove the "Viral Growth" or "Inference Flip" thesis.
+- **Specific Data Points**: List the exact metrics found (ARR, headcount, cost per scan).
+- **Annotated Axes**: Define the X and Y axes and include labels for specific milestones (e.g., "Seed Round," "AFT Partnership").
 
 ---
 
@@ -349,7 +349,7 @@ You MUST generate THREE primary documents. **Detailed, verbose reporting is mand
 - **Sections Required**:
     1. **Founder Deep Audit**: Narrative alpha, "Social Graph" analysis, and "Talent Spikes."
     2. **Architectural Teardown**: Detailed component-by-component analysis with diagrams.
-    3. **Visual Design Specification**: Detailed textual plan written *after* the teardown, explaining exactly what the Market Diagram, Technical Architecture Diagram, and any other relevant data graphs (e.g., Growth Trajectories) look like with all details.
+    3. **Visual Design Specification**: Detailed textual plan written *after* the teardown, explaining exactly what the Market Diagram, Technical Architecture Diagram, and any other relevant data graphs (e.g., Growth Trajectories) look like with all details. **Diagrams MUST follow this spec to be fact-dense.**
     4. **Economic Modeling**: Unit economics, inference cost estimates, and LTV/CAC projections.
     5. **Market Map & Moat Matrix**: 4-pillar moat audit and competitor displacement analysis.
     6. **Risk & Platform Displacement**: The "Sherlocking" test and regulatory red-flags.
@@ -413,4 +413,4 @@ Before finalizing, perform a structural audit to maximize readability:
 Overview Memo and 15+ page Deep Dive (with visuals, diagrams, and intimate technical details) are in `deliverables/`."
 
 ---
-*End of VC Diligence Skill Masterclass V6.*
+*End of VC Diligence Skill Masterclass V11.*
