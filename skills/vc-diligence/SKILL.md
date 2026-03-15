@@ -3,9 +3,9 @@ name: vc-diligence
 description: An exhaustive, 1000-line enterprise-grade Venture Capital due diligence skill. Provides a massive, multi-stage workflow covering deep technical research, precise search methodologies, legal/commercial risk auditing, report synthesis, and advanced Excalidraw visual argumentation for any industry.
 ---
 
-# VC Diligence Skill: The Ultimate Lead Partner Framework (V23 - Master Hyper-Depth & Visual Mastery Edition)
+# VC Diligence Skill: The Ultimate Lead Partner Framework (V24 - Visual Mastery & API Edition)
 
-This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting**, **Specialized Architecture Auditing**, **Product-Market Fit (PMF) Leveling**, and **Iterative Report Expansion**. The goal is to produce an **intimate, 30+ page master audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
+This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting**, **Specialized Architecture Auditing**, **Product-Market Fit (PMF) Leveling**, and **Excalidraw Visual Mastery**. The goal is to produce an **intimate, 30+ page master audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
 
 ## 0. PREREQUISITES & SETUP (CRITICAL)
 Before executing this skill, ensure the following dependencies are installed to support diagram rendering:
@@ -49,7 +49,8 @@ A brief summary is a failure. You are building an exhaustive legal and commercia
 15. [Phase 12.5: The Iterative Master Expansion Step](#155-phase-125-the-iterative-master-expansion-step)
 16. [Phase 13: Advanced Visual Argumentation (Skill Delegation)](#16-phase-13-advanced-visual-argumentation-skill-delegation)
 17. [Phase 14: Formatting Audit (Tables vs. Bullets)](#17-phase-14-formatting-audit-tables-vs-bullets)
-18. [Phase 15: Final Quality Assurance & Hand-off](#18-phase-15-final-quality-assurance--hand-off)
+18. [Phase 15: Excalidraw Technical Reference & JSON Protocol](#18-phase-15-excalidraw-technical-reference--json-protocol)
+19. [Phase 16: Final Quality Assurance & Hand-off](#19-phase-16-final-quality-assurance--hand-off)
 
 ---
 
@@ -73,7 +74,7 @@ mkdir -p diligence_[startup_name]/assets
 
 **Wave 0: Product DNA & User Persona (The Foundation)**
 - **Central Question**: "What exactly is the product, how does it function for the end-user, and who are the core personas it serves?"
-- **Guiding Mandate**: This wave is the most critical as it defines the scope of all subsequent waves. You MUST understand the 'Jobs to be Done' before you can audit the 'Right to Win'.
+- **Guiding Mandate**: Understand the 'Jobs to be Done' before auditing the 'Right to Win'.
 - **Discovery Specifics**: Feature inventory, user personas (Economic Buyer vs. Daily User), UX/Workflow mapping, and core value prop.
 - **Example Evidence**: A 'How it Works' page; a user manual; onboarding tutorials; detailed customer testimonials.
 
@@ -168,11 +169,11 @@ If the company is stuck between levels, identify which lever they are pulling:
 
 ---
 
-## 10.5 PHASE 10.5: FORMAL VISUAL DESIGN SPECIFICATION (FACT-DENSE)
+## 7. PHASE 10.5: FORMAL VISUAL DESIGN SPECIFICATION (FACT-DENSE)
 
 Before creating Excalidraw diagrams, you MUST write a **Visual Design Specification** that formalizes the argument. Use the `architecture-auditor` skill to ensure the spec is technical and accurate.
 
-### 10.5.1 The Research Mandate (Visual Ingredients)
+### 7.1 The Research Mandate (Visual Ingredients)
 For each diagram, you must list the **Evidence Artifacts** discovered in research:
 - **Architecture**: List the actual API endpoints, event names, and model names.
 - **Market**: List the specific market share percentages and incumbent names.
@@ -180,9 +181,9 @@ For each diagram, you must list the **Evidence Artifacts** discovered in researc
 
 ---
 
-## 7. PHASE 11: SYNTHESIS - THE MASTER DELIVERABLES PROTOCOL
+## 8. PHASE 11: SYNTHESIS - THE MASTER DELIVERABLES PROTOCOL
 
-### 7.1 `full_diligence_report.md` (The 30+ Page Master Audit)
+### 8.1 `full_diligence_report.md` (The 30+ Page Master Audit)
 - **Header 1: Executive Summary** (3-paragraph distillation).
 - **Header 2: Company Profile & Core Product** (Legal names, pivots, exhaustive feature list with sub-bullets).
 - **Header 3: Product-Market Fit Audit** (Satisfaction/Demand/Efficiency dimensions, PMF Level 1-4 verdict).
@@ -197,7 +198,7 @@ For each diagram, you must list the **Evidence Artifacts** discovered in researc
 
 ---
 
-## 8. PHASE 11.5: THE ITERATIVE MASTER EXPANSION STEP (MANDATORY)
+## 9. PHASE 11.5: THE ITERATIVE MASTER EXPANSION STEP (MANDATORY)
 
 Once the initial draft of the `full_diligence_report.md` is complete, you MUST execute this iterative expansion cycle:
 1. **Section Elaborator**: Add at least 3-5 verbose paragraphs per major section.
@@ -206,7 +207,7 @@ Once the initial draft of the `full_diligence_report.md` is complete, you MUST e
 
 ---
 
-## 9. PHASE 12: ADVANCED VISUAL ARGUMENTATION (SKILL DELEGATION)
+## 10. PHASE 12: ADVANCED VISUAL ARGUMENTATION (SKILL DELEGATION)
 
 **CRITICAL MANDATE**: Do NOT attempt to generate Excalidraw JSON manually. Use the `activate_skill` tool to invoke the `excalidraw-diagram` skill.
 
@@ -216,10 +217,63 @@ Once the initial draft of the `full_diligence_report.md` is complete, you MUST e
 
 ---
 
-## 10. FINAL QUALITY ASSURANCE & HAND-OFF
+## 11. PHASE 15: EXCALIDRAW TECHNICAL REFERENCE & JSON PROTOCOL
+
+To ensure diagrams are high-quality and correctly rendered, follow these strict JSON schema rules.
+
+### 11.1 The Two-Way Binding Rule (CRITICAL)
+Every text element inside a container MUST be bound correctly to prevent empty boxes.
+1.  **Container (Rectangle/Ellipse/Diamond)**: Must have a `boundElements` array containing the text element's ID.
+2.  **Text Element**: Must have a `containerId` property pointing to the parent shape's ID.
+
+### 11.2 Semantic Color Palette
+Use colors to encode meaning from `references/color-palette.md`:
+- **AI/LLM**: Fill `#ddd6fe`, Stroke `#6d28d9`
+- **Start/Trigger**: Fill `#fed7aa`, Stroke `#c2410c`
+- **Success/End**: Fill `#a7f3d0`, Stroke `#047857`
+- **Decision**: Fill `#fef3c7`, Stroke `#b45309`
+- **Primary/Neutral**: Fill `#3b82f6`, Stroke `#1e3a5f`
+
+### 11.3 Element Template (JSON Example)
+```json
+{
+  "elements": [
+    {
+      "id": "node-01",
+      "type": "rectangle",
+      "x": 100, "y": 100, "width": 250, "height": 100,
+      "backgroundColor": "#ddd6fe",
+      "strokeColor": "#6d28d9",
+      "roundness": { "type": 3 },
+      "boundElements": [{ "id": "text-01", "type": "text" }]
+    },
+    {
+      "id": "text-01",
+      "type": "text",
+      "containerId": "node-01",
+      "text": "L4: Deep Core Aggregator\n(600M+ Human Docs)",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "x": 110, "y": 125, "width": 230, "height": 50
+    }
+  ]
+}
+```
+
+### 11.4 Visual Patterns for Arguments
+- **Spiral/Cycle**: For feedback loops (e.g., telemetry refining models).
+- **Assembly Line**: For data transformation pipelines.
+- **Fan-Out**: For single triggers spawning multiple effects.
+- **Convergence**: For multiple signals synthesized into a verdict.
+
+---
+
+## 12. FINAL QUALITY ASSURANCE & HAND-OFF
 
 ### 19.1 Hand-off
 "Diligence complete. Overview Memo, Deep Dive, and 30+ page Master Audit (with full feature teardowns, iteratively expanded details, and specialized visual diagrams) are in `deliverables/`."
 
 ---
-*End of VC Diligence Skill Masterclass V23.*
+*End of VC Diligence Skill Masterclass V24.*
