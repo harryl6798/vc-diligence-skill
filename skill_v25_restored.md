@@ -3,7 +3,7 @@ name: vc-diligence
 description: An exhaustive, 1000-line enterprise-grade Venture Capital due diligence skill. Provides a massive, multi-stage workflow covering deep technical research, precise search methodologies, legal/commercial risk auditing, report synthesis, and advanced Excalidraw visual argumentation for any industry.
 ---
 
-# VC Diligence Skill: The Ultimate Lead Partner Framework (V26 - Master Synthesis & Serper Edition)
+# VC Diligence Skill: The Ultimate Lead Partner Framework (V25 - Master Hyper-Depth & Visual mastery Edition)
 
 This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting**, **Specialized Architecture Auditing**, **Product-Market Fit (PMF) Leveling**, and **Excalidraw Visual Mastery**. The goal is to produce an **intimate, 30+ page master audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
 
@@ -15,7 +15,6 @@ Before executing this skill, ensure the following dependencies are installed to 
 4. **Specialized Agents**: 
     - Use `architecture-auditor` for Phase 4 & 10.5 (Technical Teardown).
     - Use `excalidraw-diagram` for Phase 12 (Diagram Generation).
-5. **API Keys**: Ensure `SERPER_API_KEY` is available in the environment for high-fidelity image discovery.
 
 ---
 
@@ -29,12 +28,6 @@ A brief summary is a failure. You are building an exhaustive legal and commercia
 - **Fact-Dense Writing**: Omit fluff. Use metrics, specific library names, and exact pricing.
 - **Exhaustive Extraction**: Use `web_fetch` on 10-20 sources per wave. **Snippets are insufficient.** You MUST extract full text to construct detailed feature breakdowns.
 - **The Search-to-Fetch Ratio**: For every Turn that includes a `google_web_search`, you MUST execute a corresponding `web_fetch` Turn for the top 3-5 high-signal results.
-
-### 1.2 The "Proxy Research" Principle
-If direct information about a startup is scarce (e.g., stealth), you MUST research the **ecosystem proxies**:
-- **Technology Proxies**: Research the benchmarks of the specific tools/frameworks they use.
-- **Personnel Proxies**: Research the "Success Patterns" of the companies the founders came from.
-- **Competitor Proxies**: Perform deep teardowns of incumbents to identify the *exact* "White Space" the startup is filling.
 
 ---
 
@@ -50,7 +43,7 @@ If direct information about a startup is scarce (e.g., stealth), you MUST resear
 9. [Phase 8: The 2025-2026 AI Impact & Industry Trend Analysis](#11-phase-8-the-2025-2026-ai-impact--industry-trend-analysis)
 10. [Phase 9: The Master VC Diligence Questionnaire (Exhaustive)](#12-phase-9-the-master-vc-diligence-questionnaire-exhaustive)
 11. [Phase 10: Legal, Regulatory & Governance Risk Auditing](#13-phase-10-legal-regulatory--governance-risk-auditing)
-12. [Phase 11: Visual Asset Acquisition (Serper Image Search)](#14-phase-11-visual-asset-acquisition-serper-image-search)
+12. [Phase 11: Visual Asset Acquisition & Content Richness](#14-phase-10-visual-asset-acquisition--content-richness)
 13. [Phase 11.5: Formal Visual Design Specification](#145-phase-115-formal-visual-design-specification)
 14. [Phase 12: Synthesis - Master Deliverables Protocol](#15-phase-12-synthesis---master-deliverables-protocol)
 15. [Phase 12.5: The Iterative Master Expansion Step](#155-phase-125-the-iterative-master-expansion-step)
@@ -58,7 +51,7 @@ If direct information about a startup is scarce (e.g., stealth), you MUST resear
 17. [Phase 13: Advanced Visual Argumentation (Skill Delegation)](#16-phase-13-advanced-visual-argumentation-skill-delegation)
 18. [Phase 13.1: Visual Quality Assurance & Refinement Loop](#161-phase-131-visual-quality-assurance--refinement-loop)
 19. [Phase 14: Formatting Audit (Tables vs. Bullets)](#17-phase-14-formatting-audit-tables-vs-bullets)
-20. [Phase 15: Final Holistic Synthesis & Conviction Scoring](#18-phase-15-final-holistic-synthesis--conviction-scoring)
+20. [Phase 15: Excalidraw Technical Reference & JSON Protocol](#18-phase-15-excalidraw-technical-reference--json-protocol)
 21. [Phase 16: Final Quality Assurance & Hand-off](#19-phase-16-final-quality-assurance--hand-off)
 
 ---
@@ -190,27 +183,9 @@ For each diagram, you must list the **Evidence Artifacts** discovered in researc
 
 ---
 
-## 8. PHASE 11: VISUAL ASSET ACQUISITION (SERPER IMAGE SEARCH)
+## 8. PHASE 11: SYNTHESIS - THE MASTER DELIVERABLES PROTOCOL
 
-If `google_web_search` fails to provide direct image URLs, you MUST use the **Serper API** for high-fidelity image discovery.
-
-### 8.1 Serper Image Discovery SOP
-1. **Search Protocol**: Use `run_shell_command` to call the Serper Images API.
-2. **Command Template**:
-```bash
-curl -X POST 'https://google.serper.dev/images' \
-  -H "X-API-KEY: $SERPER_API_KEY" \
-  -H 'Content-Type: application/json' \
-  -d '{"q": "[Founder Name] [Company] headshot", "num": 10}'
-```
-3. **URL Extraction**: Identify the `imageUrl` from the JSON response.
-4. **Download & Verification**: Follow the standard `curl -Lfg` and `file` check protocol.
-
----
-
-## 9. PHASE 12: SYNTHESIS - THE MASTER DELIVERABLES PROTOCOL
-
-### 9.1 `full_diligence_report.md` (The 30+ Page Master Audit)
+### 8.1 `full_diligence_report.md` (The 30+ Page Master Audit)
 - **Header 1: Executive Summary** (3-paragraph distillation).
 - **Header 2: Company Profile & Core Product** (Legal names, pivots, exhaustive feature list with sub-bullets).
 - **Header 3: Product-Market Fit Audit** (Satisfaction/Demand/Efficiency dimensions, PMF Level 1-4 verdict).
@@ -225,7 +200,7 @@ curl -X POST 'https://google.serper.dev/images' \
 
 ---
 
-## 10. PHASE 12.5: THE ITERATIVE MASTER EXPANSION STEP (MANDATORY)
+## 9. PHASE 11.5: THE ITERATIVE MASTER EXPANSION STEP (MANDATORY)
 
 Once the initial draft of the `full_diligence_report.md` is complete, you MUST execute this iterative expansion cycle:
 1. **Section Elaborator**: Add at least 3-5 verbose paragraphs per major section.
@@ -234,7 +209,7 @@ Once the initial draft of the `full_diligence_report.md` is complete, you MUST e
 
 ---
 
-## 11. PHASE 12.6: TECHNICAL CONTEXT GAP-FILLING (DEEP DIVE EXPANSION)
+## 10. PHASE 11.6: TECHNICAL CONTEXT GAP-FILLING (DEEP DIVE EXPANSION)
 
 After generating the initial draft of the `technical_commercial_deep_dive.md`, you MUST perform a **Technical Gap Audit**:
 
@@ -248,7 +223,7 @@ After generating the initial draft of the `technical_commercial_deep_dive.md`, y
 
 ---
 
-## 12. PHASE 13: ADVANCED VISUAL ARGUMENTATION (SKILL DELEGATION)
+## 11. PHASE 12: ADVANCED VISUAL ARGUMENTATION (SKILL DELEGATION)
 
 **CRITICAL MANDATE**: Do NOT attempt to generate Excalidraw JSON manually. Use the `activate_skill` tool to invoke the `excalidraw-diagram` skill.
 
@@ -258,7 +233,7 @@ After generating the initial draft of the `technical_commercial_deep_dive.md`, y
 
 ---
 
-## 13. PHASE 13.1: VISUAL QUALITY ASSURANCE & REFINEMENT LOOP
+## 12. PHASE 12.1: VISUAL QUALITY ASSURANCE & REFINEMENT LOOP
 
 Once diagrams are initially generated and rendered as PNGs, you MUST perform a **Visual Audit**:
 
@@ -272,27 +247,7 @@ Once diagrams are initially generated and rendered as PNGs, you MUST perform a *
 
 ---
 
-## 14. PHASE 15: FINAL HOLISTIC SYNTHESIS & CONVICTION SCORING
-
-Before finalizing the hand-off, perform a **Holistic Global Analysis** across all generated documents.
-
-### 14.1 The Conviction Scorecard
-Assign a score (1-10) to the following dimensions based on the *entire* output:
-1.  **Technical Moat**: (Is it a physics-based moat or a commodity wrapper?)
-2.  **Founder Alpha**: (Do they have the "Right to Win" and "Grit Signals"?)
-3.  **Market Urgency**: (Is this a "Painkiller" or a "Vitamin"?)
-4.  **Capital Efficiency**: (What is their ARR-to-Burn ratio?)
-5.  **Regulatory/Platform Resilience**: (Can they survive OpenAI or shifting laws?)
-
-### 14.2 The "Red Team" Critique
-Force the AI to argue *against* the investment for one paragraph. What is the single most likely reason this company fails?
-
-### 14.3 Synthesis Statement
-Construct a 3-paragraph final argument that weaves together the Architecture, PMF Level, and Capital Structure into a definitive Lead Partner verdict.
-
----
-
-## 15. PHASE 16: EXCALIDRAW TECHNICAL REFERENCE & JSON PROTOCOL
+## 13. PHASE 15: EXCALIDRAW TECHNICAL REFERENCE & JSON PROTOCOL
 
 To ensure diagrams are high-quality and correctly rendered, follow these strict JSON schema rules.
 
@@ -309,12 +264,46 @@ Use colors to encode meaning from `references/color-palette.md`:
 - **Decision**: Fill `#fef3c7`, Stroke `#b45309`
 - **Primary/Neutral**: Fill `#3b82f6`, Stroke `#1e3a5f`
 
+### 15.3 Element Template (JSON Example)
+```json
+{
+  "elements": [
+    {
+      "id": "node-01",
+      "type": "rectangle",
+      "x": 100, "y": 100, "width": 250, "height": 100,
+      "backgroundColor": "#ddd6fe",
+      "strokeColor": "#6d28d9",
+      "roundness": { "type": 3 },
+      "boundElements": [{ "id": "text-01", "type": "text" }]
+    },
+    {
+      "id": "node-01",
+      "type": "text",
+      "containerId": "node-01",
+      "text": "L4: Deep Core Aggregator\n(600M+ Human Docs)",
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "x": 110, "y": 125, "width": 230, "height": 50
+    }
+  ]
+}
+```
+
+### 15.4 Visual Patterns for Arguments
+- **Spiral/Cycle**: For feedback loops (e.g., telemetry refining models).
+- **Assembly Line**: For data transformation pipelines.
+- **Fan-Out**: For single triggers spawning multiple effects.
+- **Convergence**: For multiple signals synthesized into a verdict.
+
 ---
 
-## 16. FINAL QUALITY ASSURANCE & HAND-OFF
+## 14. FINAL QUALITY ASSURANCE & HAND-OFF
 
 ### 19.1 Hand-off
 "Diligence complete. Overview Memo, Deep Dive, and 30+ page Master Audit (with full feature teardowns, iteratively expanded details, and specialized visual diagrams) are in `deliverables/`."
 
 ---
-*End of VC Diligence Skill Masterclass V26.*
+*End of VC Diligence Skill Masterclass V25.*
