@@ -3,7 +3,7 @@ name: vc-diligence
 description: An exhaustive, 1000-line enterprise-grade Venture Capital due diligence skill. Provides a massive, multi-stage workflow covering deep technical research, precise search methodologies, legal/commercial risk auditing, report synthesis, and advanced Excalidraw visual argumentation for any industry.
 ---
 
-# VC Diligence Skill: The Ultimate Lead Partner Framework (V22 - PMF & Multi-Agent Discovery Edition)
+# VC Diligence Skill: The Ultimate Lead Partner Framework (V23 - Master Hyper-Depth & Visual Mastery Edition)
 
 This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting**, **Specialized Architecture Auditing**, **Product-Market Fit (PMF) Leveling**, and **Iterative Report Expansion**. The goal is to produce an **intimate, 30+ page master audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
 
@@ -22,10 +22,11 @@ Before executing this skill, ensure the following dependencies are installed to 
 
 ### 1.1 The 30-Page Master Mandate
 A brief summary is a failure. You are building an exhaustive legal and commercial case.
-- **The Isomorphism Principle**: Diagrams must convey business logic through structure, not just labels.
-- **The Education Test**: Could someone learn something concrete from the diagram?
+- **The Isomorphism Principle**: Diagrams must convey business logic through structure, not just labels. If you remove the text, the shape should still be the meaning.
+- **The Education Test**: Could someone learn something concrete from the diagram? It must show actual formats, real event names, and concrete examples.
 - **The Traceability Rule**: Every claim MUST be backed by a link or raw finding file.
 - **Fact-Dense Writing**: Omit fluff. Use metrics, specific library names, and exact pricing.
+- **Exhaustive Extraction**: Use `web_fetch` on 10-20 sources per wave. **Snippets are insufficient.** You MUST extract full text to construct detailed feature breakdowns.
 - **The Search-to-Fetch Ratio**: For every Turn that includes a `google_web_search`, you MUST execute a corresponding `web_fetch` Turn for the top 3-5 high-signal results.
 
 ---
@@ -72,8 +73,9 @@ mkdir -p diligence_[startup_name]/assets
 
 **Wave 0: Product DNA & User Persona (The Foundation)**
 - **Central Question**: "What exactly is the product, how does it function for the end-user, and who are the core personas it serves?"
-- **Guiding Mandate**: Understand the 'Jobs to be Done' before auditing the 'Right to Win'.
+- **Guiding Mandate**: This wave is the most critical as it defines the scope of all subsequent waves. You MUST understand the 'Jobs to be Done' before you can audit the 'Right to Win'.
 - **Discovery Specifics**: Feature inventory, user personas (Economic Buyer vs. Daily User), UX/Workflow mapping, and core value prop.
+- **Example Evidence**: A 'How it Works' page; a user manual; onboarding tutorials; detailed customer testimonials.
 
 **Wave 0.5: Product-Market Fit (PMF) Audit**
 - **Central Question**: "At what level of PMF is this startup currently operating (Level 1–4), and what are the signals of satisfaction, demand, and efficiency?"
@@ -86,22 +88,48 @@ mkdir -p diligence_[startup_name]/assets
 
 **Wave 1: Identity, Trajectory & Capital Structure**
 - **Central Question**: "Who is this company at its core, how much capital have they consumed, and what is their growth velocity?"
-- **Discovery Specifics**: Legal Structure, Cap Table Proxies (Form D), Hiring Velocity (LinkedIn).
+- **Discovery Specifics**:
+    - **Legal Structure**: Identify parent entity, DBAs, and former names.
+    - **Cap Table Proxies**: Hunt for funding announcements and SEC Form D filings.
+    - **Hiring Velocity**: Search for "LinkedIn Headcount Growth" patterns or historical job postings.
+- **Example Evidence**: A Press Release confirming funding rounds; a Crunchbase entry showing round intervals.
 
 **Wave 2: Founder Alpha & Talent Density**
 - **Central Question**: "Why is this specific team uniquely qualified to win this category, and what are their individual 'superpowers'?"
-- **Discovery Specifics**: The 'Spike' (Academic, Serial, BigTech), Social Graph, Conflict/Cohesion history.
+- **Discovery Specifics**:
+    - **The 'Spike'**: Identify the world-class expertise of each founder (Academic, Serial, BigTech).
+    - **Social Graph**: Search for testimonials, board seats, or past managers.
+    - **Conflict/Cohesion**: Find evidence of past collaboration (worked together at X for Y years).
+- **Example Evidence**: Google Scholar profiles; LinkedIn recommendations; academic publication history.
 
 **Wave 3: Technical Architecture & Product Moat**
 - **Central Question**: "Exactly how is this built, where are the structural bottlenecks, and is it a defensible moat or a thin wrapper?"
-- **MANDATORY**: Use `web_fetch` on all technical docs. Build a component-by-component feature teardown.
+- **MANDATORY**: Use `web_fetch` on all technical docs, API references, and engineering blogs found. Build a component-by-component feature teardown.
+- **Discovery Specifics**:
+    - **Infrastructure Stack**: Identify the 'Plumbing' (AWS/GCP, DBs, LLM providers).
+    - **Proprietary IP**: Search for internal project names, custom protocols, or patents.
+    - **Performance Benchmarks**: Hunt for latency, throughput, or accuracy metrics.
+- **Example Evidence**: API references; GitHub dependency audits; technical whitepapers.
 
 **Wave 4: Market Dynamics & Competitive Displacement**
 - **Central Question**: "Which $B+ market is being eaten, who are the incumbents being displaced, and what are the exit benchmarks?"
-- **The Synthesis Mandate**: Do NOT search for "TAM SAM SOM." Search for **Atomic Facts** (user counts, pricing proxies) and synthesize.
+- **The Synthesis Mandate**: Do NOT search for "TAM SAM SOM." Search for **Atomic Facts**:
+    - **Market Size Proxies**: "Total number of [Target User Profile]" or "Total addressable market of [Industry Sector]".
+    - **Pricing Proxies**: "[Competitor] pricing" or "[Incumbent] revenue per user".
+    - **Adoption Proxies**: "[Competitor] customer count".
+- **Hypothesis-First (MANDATORY)**: Based on Waves 1-3, define the *disrupted market* and name the *likely incumbents* and *emerging challengers*.
+- **Discovery Specifics**:
+    - **Incumbent Vulnerability**: Search for "Negative Reviews" or "Integrations Issues" with incumbents.
+    - **Category Pricing**: Hunt for competitor pricing pages or 'Talk to Sales' leakages.
+    - **Exit Comps**: Find 3-5 recent M&A deals in the sector.
+- **Example Evidence**: A Forrester Wave report showing the incumbent's market share is declining; an M&A deal at a 12x revenue multiple.
 
 ### 4.2 Query Fanout Mandate
 For every Central Question or Hypothesis, you MUST generate a **fanout of 3-5 distinct, multi-angle queries**.
+- **Angle 1: Direct Discovery**: (e.g., `\"[Startup] [Topic]\"`)
+- **Angle 2: Proxy Signals**: Search for indirect evidence (e.g., `\"[Topic] reviews\"`, `"hiring for [Topic]"`).
+- **Angle 3: Technical/Source-Specific**: Target deep sources (`site:github.com`, `filetype:pdf`).
+- **Angle 4: Competitive/Market Context**: (e.g., `\"[Startup] vs [Competitor]\"`).
 
 ### 4.3 The Search Critic & Intent SOP (Least-to-Most Protocol)
 Before executing ANY query, apply **Least-to-Most Prompting**:
@@ -114,9 +142,11 @@ Before executing ANY query, apply **Least-to-Most Prompting**:
 
 ## 5. PHASE 4: SPECIALIZED TECHNICAL TEARDOWN (ARCHITECTURE AUDITOR)
 
-**CRITICAL DELEGATION**: For this phase, activate the `architecture-auditor` skill.
-1. **Harvest Ingredients**: Collect real API names, JSON schemas, and method calls.
-2. **Audit Moat**: Use the `architecture-auditor` to perform the "Wrapper vs. Moat" test.
+**CRITICAL DELEGATION**: For this phase, you MUST activate the `architecture-auditor` skill.
+
+1.  **Harvest Ingredients**: Collect real API names, JSON schemas, and method calls to prove the depth of integration.
+2.  **Audit Moat**: Use the `architecture-auditor` specialist to perform the "Wrapper vs. Moat" test.
+3.  **Feature Teardown**: Draft the detailed component-by-component analysis for the final report.
 
 ---
 
@@ -138,26 +168,41 @@ If the company is stuck between levels, identify which lever they are pulling:
 
 ---
 
+## 10.5 PHASE 10.5: FORMAL VISUAL DESIGN SPECIFICATION (FACT-DENSE)
+
+Before creating Excalidraw diagrams, you MUST write a **Visual Design Specification** that formalizes the argument. Use the `architecture-auditor` skill to ensure the spec is technical and accurate.
+
+### 10.5.1 The Research Mandate (Visual Ingredients)
+For each diagram, you must list the **Evidence Artifacts** discovered in research:
+- **Architecture**: List the actual API endpoints, event names, and model names.
+- **Market**: List the specific market share percentages and incumbent names.
+- **Economic**: List the exact ARR milestones and gross margin percentages.
+
+---
+
 ## 7. PHASE 11: SYNTHESIS - THE MASTER DELIVERABLES PROTOCOL
 
 ### 7.1 `full_diligence_report.md` (The 30+ Page Master Audit)
 - **Header 1: Executive Summary** (3-paragraph distillation).
-- **Header 2: Company Profile & Core Product** (Legal names, feature list).
+- **Header 2: Company Profile & Core Product** (Legal names, pivots, exhaustive feature list with sub-bullets).
 - **Header 3: Product-Market Fit Audit** (Satisfaction/Demand/Efficiency dimensions, PMF Level 1-4 verdict).
-- **Header 4: The Founder Alpha Audit** (Histories, social graphs, citations).
-- **Header 5: Financing & Capital Structure** (Round-by-round partners, valuations).
-- **Header 6: Detailed Technical Architecture** (Plumbing, stack choices, bottlenecks).
-- **Header 7: Market & Competitive Landscape** (TAM/SAM/SOM synthesis, incumbent weaknesses).
-- **Header 8: Commercials & Unit Economics** (GTM strategy, LTV/CAC modeling).
-- **Header 9: Legal, Regulatory & Governance** (IP provenance, compliance).
-- **Header 10: Master Research Appendix** (Categorized links).
+- **Header 4: The Founder Alpha Audit** (Complete histories, social graphs, citations, and links).
+- **Header 5: Financing & Capital Structure** (Round-by-round partners, valuations, board composition).
+- **Header 6: Detailed Technical Architecture** (Plumbing, stack choices, bottlenecks, "Wrapper vs. Moat" test).
+- **Header 7: Market & Competitive Landscape** (TAM/SAM/SOM synthesis, incumbent weaknesses, displacement economics table).
+- **Header 8: Commercials & Unit Economics** (GTM strategy, LTV/CAC modeling, churn analysis).
+- **Header 9: Legal, Regulatory & Governance** (IP provenance, compliance status).
+- **Header 10: Master Research Appendix** (Categorized links and full source citations).
 - **Header 11: Final Investment Verdict** (Detailed rationale explaining the "Why").
 
 ---
 
 ## 8. PHASE 11.5: THE ITERATIVE MASTER EXPANSION STEP (MANDATORY)
 
-Once the initial draft of the `full_diligence_report.md` is complete, you MUST execute this iterative expansion cycle to reached the **30-page mandate**.
+Once the initial draft of the `full_diligence_report.md` is complete, you MUST execute this iterative expansion cycle:
+1. **Section Elaborator**: Add at least 3-5 verbose paragraphs per major section.
+2. **Structural Depth**: Convert flat lists into hierarchical structures with H3/H4 sub-headings and nested sub-bullets.
+3. **Citation Check**: Ensure every factual claim has a corresponding source link (3-5 links per section).
 
 ---
 
@@ -165,12 +210,16 @@ Once the initial draft of the `full_diligence_report.md` is complete, you MUST e
 
 **CRITICAL MANDATE**: Do NOT attempt to generate Excalidraw JSON manually. Use the `activate_skill` tool to invoke the `excalidraw-diagram` skill.
 
+1. **Invoke the Skill**: Pass your detailed `Visual Design Specification` to the `excalidraw-diagram` skill.
+2. **Rendering**: After the skill generates the `.excalidraw` files, use the internal renderer to convert them to PNGs:
+   - **Command**: `python3 ~/.agents/skills/excalidraw-diagram/references/render_excalidraw.py diligence_[startup]/diagrams/[filename].excalidraw`
+
 ---
 
 ## 10. FINAL QUALITY ASSURANCE & HAND-OFF
 
 ### 19.1 Hand-off
-"Diligence complete. Overview Memo, Deep Dive, and 30+ page Master Audit (with full PMF Leveling, feature teardowns, and specialized visual diagrams) are in `deliverables/`."
+"Diligence complete. Overview Memo, Deep Dive, and 30+ page Master Audit (with full feature teardowns, iteratively expanded details, and specialized visual diagrams) are in `deliverables/`."
 
 ---
-*End of VC Diligence Skill Masterclass V22.*
+*End of VC Diligence Skill Masterclass V23.*
