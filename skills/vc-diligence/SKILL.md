@@ -3,54 +3,54 @@ name: vc-diligence
 description: An exhaustive, 1000-line enterprise-grade Venture Capital due diligence skill. Provides a massive, multi-stage workflow covering deep technical research, precise search methodologies, legal/commercial risk auditing, report synthesis, and advanced Excalidraw visual argumentation for any industry.
 ---
 
-# VC Diligence Skill: The Global Lead Partner Handbook
+# VC Diligence Skill: The Global Lead Partner Handbook (V2 - Recursive Conviction Edition)
 
 This document is the definitive, exhaustive guide for executing the `vc-diligence` skill. It transforms the AI agent into a world-class, Lead Partner-level Venture Capital Analyst capable of auditing startups in any sector (SaaS, Fintech, Deep Tech, AI, Consumer, Infrastructure). 
 
-This is not a simple checklist; it is a comprehensive masterclass detailing exactly *how* to build conviction through traceable evidence, precise data extraction, and visually compelling architectural and market diagrams using Excalidraw JSON.
+## Core Philosophy: The Recursive Conviction Loop
+Unlike standard research, VC Diligence requires **Conviction**. Conviction is not found in a single search; it is built through an iterative loop of:
+1. **Hypothesis**: "This company has a data moat."
+2. **Search**: Find evidence of data sources.
+3. **Audit**: "The evidence is thin; I only found a blog post, not a technical spec."
+4. **Loop**: Perform deeper, more granular searches (Stage 5, 6, 7) until the technical reality is clear.
 
 ---
 
 ## TABLE OF CONTENTS
-1. [Core Philosophy: The Lead Partner's Mindset](#1-core-philosophy--the-lead-partners-mindset)
+1. [The Analyst Mindset & Persona](#1-the-analyst-mindset--persona)
 2. [Phase 0: Workspace Architecture & Initialization](#2-phase-0-workspace-architecture--initialization)
-3. [Phase 1: Advanced Search & Research Methodology](#3-phase-1-advanced-search--research-methodology)
-4. [Phase 2: The Founder Alpha & Team Audit](#4-phase-2-the-founder-alpha--team-audit)
-5. [Phase 3: Technical Architecture & System Audit](#5-phase-3-technical-architecture--system-audit)
-6. [Phase 4: Commercial, Financial & Unit Economic Diligence](#6-phase-4-commercial-financial--unit-economic-diligence)
-7. [Phase 5: Market Dynamics, Competitive Moats & Exit Benchmarks](#7-phase-5-market-dynamics-competitive-moats--exit-benchmarks)
-8. [Phase 6: The 2025-2026 AI Impact & Industry Trend Analysis](#8-phase-6-the-2025-2026-ai-impact--industry-trend-analysis)
-9. [Phase 7: The Master VC Diligence Questionnaire (100+ Questions)](#9-phase-7-the-master-vc-diligence-questionnaire-100-questions)
-10. [Phase 8: Legal, Regulatory & Governance Risk Auditing](#10-phase-8-legal-regulatory--governance-risk-auditing)
-11. [Phase 9: Synthesis - The 50-Point Investment Memorandum](#11-phase-9-synthesis---the-50-point-investment-memorandum)
-12. [Phase 10: Advanced Visual Argumentation (Excalidraw SOP)](#12-phase-10-advanced-visual-argumentation-excalidraw-sop)
-13. [Phase 11: Excalidraw Master Templates (Architecture, Matrix, Flywheel)](#13-phase-11-excalidraw-master-templates-architecture-matrix-flywheel)
-14. [Phase 12: CRITICAL JSON Safety & Syntax Protocol](#14-phase-12-critical-json-safety--syntax-protocol)
-15. [Phase 13: Final Quality Assurance Loop & Deliverable Hand-off](#15-phase-13-final-quality-assurance-loop--deliverable-hand-off)
+3. [Phase 1: Advanced Recursive Search Methodology](#3-phase-1-advanced-recursive-search-methodology)
+4. [Phase 2: MCP Service Discovery & Third-Party Intelligence](#4-phase-2-mcp-service-discovery--third-party-intelligence)
+5. [Phase 3: The Founder Alpha & Team Audit](#5-phase-3-the-founder-alpha--team-audit)
+6. [Phase 4: Technical Architecture & System Audit](#6-phase-4-technical-architecture--system-audit)
+7. [Phase 5: Commercial, Financial & Unit Economic Diligence](#7-phase-5-commercial-financial--unit-economic-diligence)
+8. [Phase 6: Market Dynamics, Competitive Moats & Exit Benchmarks](#8-phase-6-market-dynamics-competitive-moats--exit-benchmarks)
+9. [Phase 7: The 2025-2026 AI Impact & Industry Trend Analysis](#9-phase-7-the-2025-2026-ai-impact--industry-trend-analysis)
+10. [Phase 8: The Master VC Diligence Questionnaire (Exhaustive)](#10-phase-8-the-master-vc-diligence-questionnaire-exhaustive)
+11. [Phase 9: Legal, Regulatory & Governance Risk Auditing](#11-phase-9-legal-regulatory--governance-risk-auditing)
+12. [Phase 10: Synthesis - Dual Deliverable Protocol](#12-phase-10-synthesis---dual-deliverable-protocol)
+13. [Phase 11: Advanced Visual Argumentation (Excalidraw SOP)](#13-phase-11-advanced-visual-argumentation-excalidraw-sop)
+14. [Phase 12: Excalidraw Master Templates](#14-phase-12-excalidraw-master-templates)
+15. [Phase 13: CRITICAL JSON Safety & Syntax Protocol](#15-phase-13-critical-json-safety--syntax-protocol)
+16. [Phase 14: Final Quality Assurance & Hand-off](#16-phase-14-final-quality-assurance--hand-off)
 
 ---
 
-## 1. CORE PHILOSOPHY & THE ANALYST PERSONA
+## 1. THE ANALYST MINDSET & PERSONA
 
-### 1.1 The "Diligence as an Argument" Mandate
-Due diligence is the rigorous process of moving from a state of interest to a state of **unshakable conviction**. You are not generating a summary; you are building a legal and commercial case for the deployment of capital.
+### 1.1 The "Evidence-Based Conviction" Mandate
+You are building a legal and commercial case for the deployment of millions of dollars.
 - **The Isomorphism Principle**: If you remove the text from your diagrams, the shapes must still convey the logic of the business.
 - **The Traceability Rule**: Every claim in the final memo must be traceable to a specific raw finding file or search result.
 
 ### 1.2 The Analyst Persona: The Lead Partner
-Adopt the persona of a tier-1 VC Partner.
-- **Visionary Skepticism**: You see the massive potential but obsess over the failure modes.
-- **Fact-Dense Writing**: Omit adjectives like "innovative," "game-changing," or "cutting-edge." Replace them with "proprietary 16k-feature SAE layer," "10x lower latency," or "$30M ARR benchmark."
-- **Bias Toward Evidence**: If there is no evidence, it is a "High Risk" or an "Evidence Gap."
+- **Visionary Skepticism**: You see the potential but obsess over the failure modes.
+- **Fact-Dense Writing**: Omit adjectives like "innovative." Use metrics like "proprietary 16k-feature SAE layer" or "$30M ARR benchmark."
 
 ---
 
 ## 2. PHASE 0: WORKSPACE ARCHITECTURE & INITIALIZATION
 
-Before a single byte of data is searched, you must establish a highly organized, persistence-ready workspace. Do not rely on context memory; write everything to the disk immediately.
-
-### 2.1 Directory Structure
-Use `run_shell_command` to initialize:
 ```bash
 mkdir -p diligence_[startup_name]/raw_findings/team
 mkdir -p diligence_[startup_name]/raw_findings/tech
@@ -60,255 +60,151 @@ mkdir -p diligence_[startup_name]/diagrams
 mkdir -p diligence_[startup_name]/deliverables
 ```
 
-### 2.2 The Initialization Manifesto
-Use `write_file` to create `diligence_[startup_name]/research_plan.md`. This plan MUST define:
-- **The Core Investment Hypothesis**: (e.g., "The startup captures 40% of the middle-market reconciliation market by using autonomous agents to replace legacy ERP data entry.")
-- **The "Kill the Deal" Questions**: The top 3-5 risks that would stop the investment.
-- **The Research Waves**: Defined in the next section.
+---
+
+## 3. PHASE 1: ADVANCED RECURSIVE SEARCH METHODOLOGY
+
+### 3.1 The Wave-Based Approach
+**Wave 1: Identity & Early History**
+- `"[Startup Name]" launch OR Y Combinator OR TechCrunch`
+- `"[Startup Name]" crunchbase funding history`
+
+**Wave 2: Founder Alpha (Technical & Academic)**
+- `"[Founder Name]" research OR thesis OR patents OR publications`
+- `"[Founder Name]" previous exit OR acquired OR shutdown`
+
+**Wave 3: Technical Architecture (The Deep Dive)**
+- `"[Startup Name]" architecture OR system diagram OR tech stack`
+- `"[Startup Name]" whitepaper OR technical blog`
+
+**Wave 4: Market & Exit Benchmarks**
+- `"[Competitor Name]" ARR 2024 2025 OR acquisition price`
+- `"[Category]" market size bottom-up analysis 2025`
+
+### 3.2 The Recursive Loop SOP
+After each wave, you MUST perform an **Evidence Audit**:
+1. **Identify Weak Spots**: "I found the product features but I don't know the underlying model provider."
+2. **Trigger Wave 5+**: Perform 3-5 more targeted searches specifically for the missing detail.
+3. **Exhaustion Rule**: If information cannot be found after 3 recursive loops, document it as a **🔴 CRITICAL Evidence Gap**.
 
 ---
 
-## 3. PHASE 1: ADVANCED SEARCH & RESEARCH METHODOLOGY
+## 4. PHASE 2: MCP SERVICE DISCOVERY & THIRD-PARTY INTELLIGENCE
 
-Precision in searching determines the quality of the investment. Use a "Wave-Based" approach to build cumulative knowledge.
-
-### 3.1 Wave 1: The Identity Wave (Broad)
-**Goal**: Define the company's identity and early history.
-- **Tools**: `google_web_search`.
-- **Search Queries**:
-  - `"[Startup Name]" launch OR Y Combinator OR TechCrunch`
-  - `"[Startup Name]" crunchbase funding history`
-  - `site:linkedin.com/company "[Startup Name]" employee count`
-  - `"[Startup Name]" customer reviews OR G2 OR Reddit threads`
-
-### 3.2 Wave 2: The Alpha Wave (Team & Academic)
-**Goal**: Determine if the founders have "Unfair Advantage."
-- **Search Queries**:
-  - `"[Founder Name]" research OR thesis OR patents OR publications`
-  - `"[Founder Name]" previous exit OR acquired OR shutdown`
-  - `"[Founder Name]" (MIT OR Stanford OR UCL OR Oxford) degree`
-  - `"[Founder Name]" interview OR podcast transcript`
-
-### 3.3 Wave 3: The Architecture Wave (Technical)
-**Goal**: Extract the "How."
-- **Search Queries**:
-  - `"[Startup Name]" architecture OR system diagram OR tech stack`
-  - `site:github.com "[Startup Name]" OR "[Founder Name]"`
-  - `"[Startup Name]" API documentation OR developer guide`
-  - `"[Startup Name]" whitepaper OR technical blog`
-
-### 3.4 Wave 4: The Market Wave (Commercial)
-**Goal**: Find the ARR, Price, and Competitors.
-- **Tools**: `research` (Tavily Pro).
-- **Search Queries**:
-  - `"Competitive landscape for [Startup Name] and [Category]"`
-  - `"[Competitor Name]" ARR 2024 2025 OR acquisition price`
-  - `"[Category]" market size bottom-up analysis 2025`
-  - `"Pricing for [Startup Name] OR [Competitor Name]"`
+Before concluding research, check if any **Model Context Protocol (MCP)** tools are available that provide specialized startup data (e.g., `crunchbase-tool`, `startup-intel-api`).
+- **Prompt**: "List all available MCP tools related to company data or financial metrics."
+- **Execution**: If found, use these tools to pull ARR, headcount growth, and cap table data.
 
 ---
 
-## 4. PHASE 2: THE FOUNDER ALPHA & TEAM AUDIT
+## 5. PHASE 3: THE FOUNDER ALPHA & TEAM AUDIT
 
-### 4.1 Evaluation Rubric
-- **The "Bridge" Talent**: Does someone on the team deeply understand two disparate fields? (e.g., Finance + ML, Biology + Software).
-- **The GTM Engine**: Is there a founder who can sell? Look for previous roles in Sales, Growth, or Product Marketing.
-- **The Grit Factor**: Look for "hard things" in their history—non-traditional paths, early failures, or elite competitive sports/academic achievements.
-
-### 4.2 Documentation SOP
-Write findings to `raw_findings/team/founders.md`.
-Include:
-- **Founder Alpha Signals**: Specific reasons this team is exceptional.
-- **Retention Risks**: Are they first-time founders? Is the equity split 50/50?
+### 5.1 Pedigree & "Right to Win"
+- Does the team have "Bridge Talent" (experts in two distinct fields)?
+- Check for **Grit Signals**: First-gen students, competitive history, or early failures.
 
 ---
 
-## 5. PHASE 3: TECHNICAL ARCHITECTURE & SYSTEM AUDIT
+## 6. PHASE 4: TECHNICAL ARCHITECTURE & SYSTEM AUDIT
 
-You must determine if the product is a "Moat" or a "Wrapper."
-
-### 5.1 The "Moat" Audit Categories
-1.  **Model/Core Engine**: Are they using generic APIs (OpenAI) or have they fine-tuned proprietary models?
-2.  **Infrastructure**: How is the system deployed? (Cloud-native vs Edge vs Hybrid).
-3.  **Data Loop**: Does the product naturally generate data that makes the product better?
-4.  **Interpretability/Safety**: How do they prevent hallucinations or system failures?
-
-### 5.2 Evidence Extraction
-Look for:
-- JSON schema of their data payloads.
-- Integration methods (SDKs, Webhooks, REST APIs).
-- Throughput and latency metrics.
+### 6.1 The "Wrapper vs. Moat" Test
+- **Engine**: Generic API calls vs. fine-tuned proprietary models.
+- **Integration**: Is it a "Bolt-on" or "Embedded Workflow"?
+- **Data Provenance**: Who owns the training data? Is it legally defensible?
 
 ---
 
-## 6. PHASE 4: COMMERCIAL, FINANCIAL & UNIT ECONOMIC DILIGENCE
+## 7. PHASE 5: COMMERCIAL, FINANCIAL & UNIT ECONOMIC DILIGENCE
 
-### 6.1 The Unit Economic Formula
-You must attempt to calculate or estimate:
-- **Inference/Compute Cost per User**: (Especially for AI companies).
-- **LTV/CAC Ratio**: Is the customer value 3x the cost to acquire them?
-- **Payback Period**: How many months until a customer pays back their acquisition cost?
-
-### 6.2 Revenue & Retention
-- Look for **Net Dollar Retention (NDR)**. If >120%, the company has high growth potential.
-- Look for **Churn Reasons**. Search for customer complaints or Reddit threads.
+### 7.1 Metrics to Hunt For
+- **Inference Cost**: Estimate the GPU burn per user.
+- **LTV/CAC**: Is the business sustainable?
+- **Retention**: Search for churn signals in communities (Reddit, Discord).
 
 ---
 
-## 7. PHASE 5: MARKET DYNAMICS, COMPETITIVE MOATS & EXIT BENCHMARKS
+## 8. PHASE 6: MARKET DYNAMICS, COMPETITIVE MOATS & EXIT BENCHMARKS
 
-### 7.1 Competitive Triage
-Find 3 direct competitors.
-- **Incumbent**: Large, slow, but has the customers.
-- **Direct Startup**: Well-funded peer (e.g., Series B).
-- **Indirect/Future**: Open-source alternative or feature release from a hyperscaler (Google/Microsoft).
-
-### 7.2 Exit Modeling
-Venture capital requires a 10x-100x return.
-- Find acquisition multiples in the same sector.
-- Example: "Market multiple for [Category] is 8x-12x ARR."
+- **Incumbents**: Who are the "Slow Giants"?
+- **Benchmarking**: Use real acquisition prices to model a 10x-100x return.
 
 ---
 
-## 8. PHASE 6: THE 2025-2026 AI IMPACT & INDUSTRY TREND ANALYSIS
+## 9. PHASE 7: THE 2025-2026 AI IMPACT & INDUSTRY TREND ANALYSIS
 
-Every startup today is affected by the AI shift. You must analyze the startup against these specific 2026 trends:
-
-### 8.1 The Agentic Shift
-- **Trend**: Moving from "Tools for Humans" to "Autonomous Agents" that perform end-to-end tasks.
-- **Analysis**: Does this startup have the orchestration layer to manage autonomous agents?
-
-### 8.2 Vertical AI & Data Moats
-- **Trend**: General LLMs (GPT-4) are becoming commodities. Defensibility moves to industry-specific data.
-- **Analysis**: Does the startup own a proprietary dataset that OpenAI cannot easily scrape?
-
-### 8.3 Infrastructure Maturity
-- **Trend**: High compute costs are driving a move toward "Small Language Models" (SLMs) and efficient inference.
-- **Analysis**: Is the startup model-agnostic? Can they run on Llama 3 or Mistral to save costs?
+- **Agentic Shift**: Is the startup moving toward autonomous agents?
+- **Sovereign AI**: Does the architecture support regional data sovereignty?
+- **Small Models (SLMs)**: Are they using efficient inference (e.g., Llama 3 8B) to save costs?
 
 ---
 
-## 9. PHASE 7: THE MASTER VC DILIGENCE QUESTIONNAIRE (100+ QUESTIONS)
+## 10. PHASE 8: THE MASTER VC DILIGENCE QUESTIONNAIRE (EXHAUSTIVE)
 
-Use these questions to guide your research and prepare for founder meetings.
-
-### 9.1 Technical & Product
-- How is your architecture decoupled from model providers?
-- What is your strategy for handling data privacy (e.g., SOC 2, HIPAA, GDPR)?
-- What percentage of your output is verified by a human?
-- Can you detail your CI/CD pipeline for model retraining?
-
-### 9.2 Market & GTM
-- Who is the "Economic Buyer" vs the "User"?
-- What is the specific "Hair-on-Fire" problem you solve today?
-- Detail your "Land and Expand" strategy.
-- Why is now the right time for this specific implementation?
+Include these 100+ questions in your internal audit:
+- **Product**: "What is the time-to-value for a new user?"
+- **Tech**: "How is your architecture decoupled from model providers?"
+- **Legal**: "Who owns the AI-generated outputs?"
 
 ---
 
-## 10. PHASE 8: LEGAL, REGULATORY & GOVERNANCE RISK AUDITING
+## 11. PHASE 9: LEGAL, REGULATORY & GOVERNANCE RISK AUDITING
 
-### 10.1 IP Audit
-- Check for **University IP Overhang**. (Crucial for PhD founders).
-- Check for **Open Source Poisoning**. (Using AGPL code in proprietary stacks).
-- Verify all employees have signed **PIIA** (Proprietary Information and Inventions Agreements).
-
-### 10.2 Corporate Governance
-- Verify Delaware C-Corp status.
-- Check the **Board Composition**. Are there independent directors?
-- Audit **83(b) Elections**. Missing these is a 🔴 CRITICAL financial risk.
+- **🔴 CRITICAL**: University IP overhang, missing 83(b) elections.
+- **🟠 MATERIAL**: Open-source license poisoning (AGPL), missing SOC 2.
 
 ---
 
-## 11. PHASE 9: SYNTHESIS - THE 50-POINT INVESTMENT MEMORANDUM
+## 12. PHASE 10: SYNTHESIS - DUAL DELIVERABLE PROTOCOL
 
-Generate `deliverables/investment_memo.md`. 
+You MUST generate TWO primary documents in `deliverables/`:
 
-### The 50-Point Rubric:
-1. **Thesis (Points 1-5)**: Clear, data-backed investment recommendation.
-2. **Team (Points 6-15)**: Pedigree, grit, and unique insight.
-3. **Product/Tech (Points 16-25)**: Architecture, moats, and integration details.
-4. **Market (Points 26-35)**: Competitors, ARR multiples, and exit potential.
-5. **Risks (Points 36-45)**: The "Anti-Thesis" - clear listing of deal-killers.
-6. **Next Steps (Points 46-50)**: Precise closing conditions and questions.
+### 12.1 `overview_memo.md` (The Partner Summary)
+- **Length**: 1-2 pages.
+- **Focus**: High-level thesis, risk summary, and investment recommendation.
+- **Purpose**: For the weekly Partner meeting.
 
----
-
-## 12. PHASE 10: ADVANCED VISUAL ARGUMENTATION (EXCALIDRAW SOP)
-
-Diagrams are your most powerful tool for building conviction.
-
-### 12.1 The Multi-Zoom Protocol
-- **Level 1 (Summary)**: A simple flow line (e.g., `Source -> Mecha -> User`).
-- **Level 2 (Boundaries)**: Labeled dashed boxes for environments (e.g., `Customer VPC`, `Startup Cloud`).
-- **Level 3 (Evidence)**: Dark boxes (`#1e293b`) with JSON/Code artifacts.
-
-### 12.2 Semantic Color Scale
-- **オレンジ (#fed7aa)**: Start / External Source.
-- **ブルー (#3b82f6)**: Ingestion / Gateway.
-- **パープル (#ddd6fe)**: Core Engine / AI / Compute.
-- **グリーン (#a7f3d0)**: Output / Success / API Result.
-- **イエロー (#fef3c7)**: Human Review / Admin / Final User.
-- **レッド (#fee2e2)**: Alert / Risk / Fallback.
+### 12.2 `technical_commercial_deep_dive.md` (The Exhaustive Report)
+- **Length**: 10+ pages (verbose).
+- **Focus**: Every granular finding from the recursive loops.
+- **Sections**:
+    - Detailed Founder Bio-sketches.
+    - Full Technical Stack Trace.
+    - Granular Competitive Comparison.
+    - Comprehensive Legal/Risk Matrix.
+    - Detailed Financial Modeling/Estimates.
 
 ---
 
-## 13. PHASE 11: EXCALIDRAW MASTER TEMPLATES (ARCHITECTURE, MATRIX, FLYWHEEL)
+## 13. PHASE 11: ADVANCED VISUAL ARGUMENTATION (EXCALIDRAW SOP)
 
-### 13.1 Architecture Template (The "Assembly Line")
-Use a horizontal flow from left to right.
-- **Left**: Data sources (boxes).
-- **Center**: Processors (rounded rectangles).
-- **Right**: User outcomes (ellipses).
-
-### 13.2 Competitive Matrix Template (The "Side-by-Side")
-- Column A: The Startup.
-- Column B: The Incumbent.
-- Rows: Specific features, pricing, architecture.
-
-### 13.3 Flywheel Template (The "Spiral")
-Use a circle of 4-5 arrows showing how each success feeds the next step.
+- **Level 1**: Summary Flow.
+- **Level 2**: Boundaries (VPC, Cloud, Edge).
+- **Level 3**: **Evidence Artifacts** (JSON/Code snippets).
 
 ---
 
-## 14. PHASE 12: CRITICAL JSON SAFETY & SYNTAX PROTOCOL
+## 14. PHASE 12: EXCALIDRAW MASTER TEMPLATES
 
-**🚨 THE EXCALIDRAW DEATH-TRAP 🚨**
-If your JSON has a single syntax error, the user will see "Invalid File."
-
-1. **NO LITERAL NEWLINES**: You must escape every newline as `\n` in strings.
-2. **`originalText` Matching**: `text` and `originalText` must be identical.
-3. **Index Ordering**: Use `a0, a1, a2...` for element indices.
-4. **Font Protocol**: Use `fontFamily: 3` (Monospace) for all technical evidence artifacts.
-5. **Default Arrays**: `groupIds` and `boundElements` MUST be `[]`.
+*(Refer to previous detailed JSON templates for Rectangles, Arrows, and Code Snippets. Always include `index`, `seed`, and `version`.)*
 
 ---
 
-## 15. PHASE 13: FINAL QUALITY ASSURANCE LOOP & DELIVERABLE HAND-OFF
+## 15. PHASE 13: CRITICAL JSON SAFETY & SYNTAX PROTOCOL
 
-### 15.1 The Validation Script
-Run this before handing off:
-```python
-import json
-import sys
+**NO LITERAL NEWLINES**: Escape every newline as `\n` in strings. 
+**`originalText` Matching**: `text` and `originalText` must be identical.
 
-def check(file_path):
-    with open(file_path, 'r') as f:
-        data = json.load(f)
-    print(f"VALID: {file_path}")
+---
 
-if __name__ == "__main__":
-    check(sys.argv[1])
-```
+## 16. PHASE 14: FINAL QUALITY ASSURANCE & HAND-OFF
 
-### 15.2 Hand-off Message
-"Diligence for [Startup Name] is complete. 
-Deliverables:
-- `raw_findings/`: Deep technical and founder logs.
-- `deliverables/investment_memo.md`: High-conviction memo.
-- `diagrams/`: Technical, Market, and Flywheel visuals.
+### 16.1 The Validation Script
+Run `python3 validate_excalidraw.py [file]` on every diagram.
 
-View diagrams at Excalidraw.com."
+### 16.2 Hand-off
+"Diligence for [Startup] is complete.
+Overview Memo and 10-page Deep Dive are in `deliverables/`.
+Architecture, Market, and Growth diagrams are in `diagrams/`."
 
 ---
 *End of VC Diligence Skill Masterclass.*
