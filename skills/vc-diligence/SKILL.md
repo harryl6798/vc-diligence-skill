@@ -22,6 +22,7 @@ A brief summary is a failure. You are building a legal and commercial case for t
 - **The Traceability Rule**: Every claim in the final memo must be traceable to a specific raw finding file or search result.
 - **Fact-Dense Writing**: Omit adjectives like "innovative." Use metrics like "proprietary 16k-feature SAE layer" or "$30M ARR benchmark."
 - **Exhaustive Extraction**: Use `web_fetch` on 10-20 sources per wave. **Snippets are insufficient.** You MUST extract the full text of high-signal pages (API docs, About pages, long-form interviews) to construct detailed feature breakdowns.
+- **The Search-to-Fetch Ratio**: For every Turn that includes a `google_web_search`, you MUST execute a corresponding `web_fetch` Turn for the top 3-5 high-signal results. Surface-level search results are only the beginning; the actual diligence happens in the full-text analysis.
 
 ### 1.2 The "Proxy Research" Principle
 If direct information about a startup is scarce (e.g., stealth), you MUST research the **ecosystem proxies**:
@@ -123,7 +124,8 @@ Before executing ANY query, the LLM MUST apply **Least-to-Most Prompting**:
 1. **Decomposition**: "Break the Central Question down into the fundamental sub-questions that need to be answered first."
 2. **Sequential Solving**: "Solve each sub-question one by one, using the answer from the previous step to inform the next search angle."
 3. **The 'Reasonable Searchability' Check**: Search for the **atomic ingredients** instead of the **finished meal**.
-4. **Synthesis**: Construct a generalized argument that addresses the original Central Question.
+4. **The Search-to-Fetch Mandate**: For each query fanout, identify the top high-signal URLs and execute `web_fetch`. Do not proceed to the next sub-question or wave until you have the full-text content of the primary sources.
+5. **Synthesis**: Construct a generalized argument that addresses the original Central Question.
 
 ### 4.4 The Content Harvesting Protocol (MANDATORY)
 To achieve 30+ pages, you MUST harvest raw text volume.
