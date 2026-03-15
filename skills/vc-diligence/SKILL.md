@@ -254,24 +254,29 @@ Conduct a **Legal & Regulatory Red-Flag Audit**.
 To make reports content-rich and professional, you MUST acquire, **download**, and embed high-quality visual assets.
 
 ### 13.1 Broad Asset Search Strategy
-Do NOT use overly specific queries for images. Use broad "Name + Company" patterns to find official bios and logos first.
-- **Company Logo**: Search `"[Company Name]" logo png transparent`
-- **Founder Headshots**: Search `"[Founder Name]" [Company Name]`
-- **Simple Queries**: Keep search queries simple to maximize the chance of finding official pages (e.g., Team, About, or Press pages).
+Keep queries high-level to maximize official results.
+- **Company Logo**: Search `"[Company Name]" logo png transparent` or `"[Company Name]" press kit logo`.
+- **Founder Headshots**: Use ultra-short queries: `"[Founder Name]" [Company Name]`. This is usually sufficient to yield direct bios or LinkedIn-anchored images.
+- **Simple Queries**: Do NOT use complex operators for initial image discovery. Focus on finding official "About" or "Press" pages.
 
 ### 13.2 Asset Discovery & Direct URL Extraction
-Finding the direct image URL is critical to avoid downloading HTML pages.
+Any valid image format is acceptable (PNG, JPG, JPEG, WebP, SVG).
 - **Metadata Scraping**: Use `web_fetch` or `curl` to inspect the HTML for `application/ld+json` blocks, which often contain direct URLs for logos and person headshots.
-- **Grep Pattern**: Grep for `img src` or `og:image` tags in the source code to find high-resolution assets.
-- **Absolute URLs**: Ensure the URL is absolute (starting with `http`) before attempting to download.
+- **Grep Pattern**: Grep for `img src`, `og:image`, or `twitter:image` tags.
+- **Absolute URLs**: Ensure the URL is absolute. If relative, prepend the base domain.
 
 ### 13.3 Asset Downloading & Verification SOP
-Every asset found MUST be downloaded to the `assets/` directory and **verified** to ensure it is a valid image and not an HTML error page.
-- **Download Command**: Use `curl -L -o assets/[filename].ext [URL]` to follow redirects.
-- **Verification**: IMMEDIATELY run `file assets/[filename].ext` after downloading.
-  - **Success**: Output identifies it as "PNG image data" or "JPEG image data".
-  - **Failure**: Output identifies it as "HTML document text". If this happens, the URL was likely a webpage, not a direct image link. Re-examine the source for the `src` attribute.
-- **Naming**: Use descriptive names (e.g., `logo.png`, `munk_headshot.jpg`).
+Every asset MUST be verified to ensure it is a valid image and NOT an HTML "Not Found" or "Redirect" page.
+- **Download Command**: Use `curl -Lfg -o assets/[filename].ext "[URL]"`
+    - `-L`: Follow redirects.
+    - `-f`: Fail silently on server errors (HTTP 4xx/5xx).
+    - `-g`: Disable globbing for URLs with brackets.
+- **Verification Loop**:
+    1. **Check Type**: IMMEDIATELY run `file assets/[filename].ext`.
+        - **Success**: Output contains "image data" or "SVG".
+        - **Failure**: Output contains "HTML" or "ASCII text". This indicates the URL was a webpage or a failed redirect. **DO NOT** proceed with this file; find a different direct URL.
+    2. **Check Size**: Run `ls -lh assets/[filename].ext`. If the file is < 5KB, it is likely a tracking pixel or placeholder. Seek a higher resolution asset.
+- **Naming**: Use descriptive names (e.g., `logo.png`, `tian_headshot.jpg`).
 
 ### 13.4 Richness Mandate
 - **Logos**: Embed the local logo at the top of every primary deliverable.
