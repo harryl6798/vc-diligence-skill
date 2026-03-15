@@ -100,13 +100,21 @@ Do NOT use hard-coded queries. Every search MUST be driven by a **Central Questi
     - **Exit Comps**: Find 3-5 recent M&A deals in the sector. Note the multiple (e.g., 10x ARR).
 - **Example Evidence**: A Forrester Wave report showing the incumbent's market share is declining; a news article about a competitor being acquired for $300M at a 12x multiple.
 
-### 4.2 The Search Critic & Intent SOP
+### 4.2 Query Fanout Mandate
+For every Central Question or Hypothesis, you MUST generate a **fanout of 3-5 distinct, multi-angle queries**. Relying on a single search is a failure of diligence.
+- **Angle 1: Direct Discovery**: (e.g., `"[Startup] [Topic]"`)
+- **Angle 2: Proxy Signals**: Search for indirect evidence (e.g., `"[Topic] reviews"`, `"hiring for [Topic]"`, or customer complaints).
+- **Angle 3: Technical/Source-Specific**: Target deep sources (e.g., `site:github.com`, `filetype:pdf`, or `site:docs.[startup].io`).
+- **Angle 4: Competitive/Market Context**: (e.g., `"[Startup] vs [Competitor]"`, or incumbent quarterly reports).
+
+### 4.3 The Search Critic & Intent SOP
 Before executing ANY query, the LLM MUST think:
 1. **The Objective**: "What specific piece of evidence am I missing to answer the Central Question of this wave?"
-2. **The Query Selection**: "Does this query use high-signal keywords and operators (site:, filetype:, -inurl:)?"
-3. **The 'Google Assumption' Check**: "Am I assuming Google has a direct answer? If not, how do I search for 'proxies' of this info?" (e.g., search for job descriptions to find the tech stack).
+2. **The Fanout Plan**: "What are my 3-5 distinct angles for this objective?"
+3. **The Query Selection**: "Does each query use high-signal keywords and operators (site:, filetype:, -inurl:)?"
+4. **The 'Google Assumption' Check**: "Am I assuming Google has a direct answer? If not, how do I search for 'proxies' of this info?"
 
-### 4.3 The Recursive Loop SOP
+### 4.4 The Recursive Loop SOP
 After each wave, you MUST perform an **Evidence Audit**:
 1. **Identify Weak Spots**: "I found the product features but I don't know the underlying model provider."
 2. **Trigger Wave 5+**: Perform 3-5 more targeted searches specifically for the missing detail using Query Expansion.
