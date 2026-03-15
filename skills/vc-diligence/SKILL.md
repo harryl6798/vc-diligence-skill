@@ -65,27 +65,40 @@ mkdir -p diligence_[startup_name]/assets
 
 Do NOT use hard-coded queries. Every search MUST be driven by a **Central Question** and an **Internal Hypothesis**. The LLM has full autonomy to craft queries that maximize signal-to-noise for the specific context.
 
-### 4.1 The Wave-Based Discovery Objectives
+### 4.1 The Wave-Based Discovery Objectives (In-Depth)
 
 **Wave 1: Identity, Trajectory & Capital Structure**
 - **Central Question**: "Who is this company at its core, how much capital have they consumed, and what is their growth velocity?"
-- **Hypothesis Generation**: Predict their funding stage, lead investors, and key milestones based on the name/brief.
-- **Search Intent**: Find the "Source of Truth" for company history (Crunchbase, Pitchbook, Press Releases).
+- **Discovery Specifics**:
+    - **Legal Structure**: Identify the parent entity (e.g., Vandal AI, Inc. dba Cashmere).
+    - **Cap Table Proxies**: Hunt for Series Seed/A/B announcements. Cross-reference SEC Form D filings if available.
+    - **Hiring Velocity**: Search for "LinkedIn Headcount Growth" patterns or historical job postings to see which departments are scaling.
+- **Example Evidence**: A Press Release from Reach Capital confirming a $5M Seed round; a Crunchbase entry showing 18 months between rounds (signal of capital efficiency).
 
 **Wave 2: Founder Alpha & Talent Density**
 - **Central Question**: "Why is this specific team uniquely qualified to win this category, and what are their individual 'superpowers'?"
-- **Hypothesis Generation**: Predict founder backgrounds (Academic, BigTech, Serial Founder) and their likely "Right to Win."
-- **Search Intent**: Find "Primary Evidence" of expertise (Patents, Github, Published Research, LinkedIn tenure).
+- **Discovery Specifics**:
+    - **The 'Spike'**: Identify the one thing each founder is world-class at (e.g., "The Growth Engineer," "The Industry Diplomat").
+    - **Social Capital**: Search for testimonials, board seats, or speaking engagements at elite conferences (e.g., NeurIPS, SSP).
+    - **Conflict/Cohesion**: Find evidence of past collaboration (e.g., "Founders A & B worked together at Degreed for 4 years").
+- **Example Evidence**: A Google Scholar profile showing 500+ citations in a niche technical field; a LinkedIn recommendation from a former CEO stating the founder was a "top 1% talent."
 
 **Wave 3: Technical Architecture & Product Moat**
 - **Central Question**: "Is the technology a defensible moat or a thin wrapper, and what are the critical system constraints?"
-- **Hypothesis Generation**: Predict the tech stack, data provenance, and likely points of failure (latency, cost, accuracy).
-- **Search Intent**: Find "Technical Artifacts" (API documentation, whitepapers, developer forums, system diagrams).
+- **Discovery Specifics**:
+    - **Infrastructure Stack**: Identify the 'Plumbing' (e.g., AWS vs. GCP, Vector DB choices, LLM providers).
+    - **Proprietary IP**: Search for specific internal project names or custom protocols (e.g., Cashmere's 'Omnipub' format).
+    - **Performance Benchmarks**: Hunt for latency, throughput, or accuracy metrics in technical blogs or documentation.
+- **Example Evidence**: An API reference describing a custom 'Passport' auth layer; a developer's GitHub repo showing contributions to an open-source library the startup depends on.
 
 **Wave 4: Market Dynamics & Competitive Displacement**
 - **Hypothesis-First (MANDATORY)**: Based on Waves 1-3, define the *disrupted market* and name the *likely incumbents* (Slow Giants) and *emerging challengers*.
 - **Central Question**: "Which $B+ market is being eaten, who are the incumbents being displaced, and what are the exit benchmarks for this category?"
-- **Search Intent**: Validate the internally generated market map and find "Financial Benchmarks" (ARR of competitors, M&A multiples).
+- **Discovery Specifics**:
+    - **Incumbent Vulnerability**: Search for "Negative Reviews" or "Integrations Issues" with the 800lb gorillas (e.g., Zendesk, Salesforce).
+    - **Category Pricing**: Hunt for competitor pricing pages or 'Talk to Sales' leakages to model the market's price floor.
+    - **Exit Comps**: Find 3-5 recent M&A deals in the sector. Note the multiple (e.g., 10x ARR).
+- **Example Evidence**: A Forrester Wave report showing the incumbent's market share is declining; a news article about a competitor being acquired for $300M at a 12x multiple.
 
 ### 4.2 The Search Critic & Intent SOP
 Before executing ANY query, the LLM MUST think:
