@@ -289,13 +289,27 @@ You MUST generate THREE primary documents. **Detailed, verbose reporting is mand
 
 ---
 
-## 14.5 PHASE 11.5: THE ITERATIVE EXPANSION STEP (MANDATORY)
+## 14.5 PHASE 11.5: THE ITERATIVE EXPANSION & CITATION HARVEST (MANDATORY)
 
-After drafting the `full_diligence_report.md`, you MUST perform a self-audit and expansion:
-1.  **Section Elaborator**: Go through every Header 1-10.
-2.  **Detail Injection**: Add at least 2-3 paragraphs of elaboration per section.
-3.  **Structural Depth**: Break down high-level points into sub-headings and nested sub-bullets.
-4.  **Citation Check**: Ensure every factual claim has a corresponding source link.
+Once the initial draft of the `full_diligence_report.md` is complete, you MUST execute this iterative expansion cycle to reach the **30-page mandate**:
+
+1.  **Phase 11.5.1: The Section-by-Section Elaborator**
+    - Go through every header from 1 to 10 individually.
+    - **Draft vs. Final**: For each section, compare the initial draft against the raw findings in `raw_findings/`. Identify any intimate details (e.g., specific quotes from podcasts, names of internal projects, specific library versions) that were missed and inject them.
+    - **Minimum Volume**: Add at least 3-5 verbose paragraphs per section.
+
+2.  **Phase 11.5.2: Structural Depth & Nested Sub-Bulleting**
+    - Convert flat lists into hierarchical structures with H3 and H4 sub-headings.
+    - **Intimate Mapping**: Instead of "They use LLMs," use "#### 5.1.1 Transformer Tiering: They utilize a mixture-of-experts (MoE) approach with [X] and [Y]..."
+    - **Visual Integration**: Reference specific parts of the diagrams (e.g., "As shown in the L4 layer of Figure 1...") to anchor the analysis.
+
+3.  **Phase 11.5.3: The Global Citation Audit & Link Injection**
+    - Every factual claim (valuation, ARR, founder background, tech choice) MUST be followed by a parenthetical or hyperlinked source.
+    - **Missing Link Search**: If a section lacks links, perform 1-2 targeted searches specifically to find the primary source URL for that fact. The goal is to have **at least 3-5 external links per major section**.
+    - **Source Density**: Make it feel like a very researched document by citing specific RFP award notices, patent numbers, and academic paper titles.
+
+4.  **Phase 11.5.4: Final Polish for "Research Density"**
+    - Review the document tone. It must feel like a "White Paper" or "Legal Brief." Remove all vague terminology. If you find yourself using "innovative" or "revolutionary," replace it with the specific metric or technical reason why it is so.
 
 ---
 
