@@ -3,7 +3,7 @@ name: vc-diligence
 description: An exhaustive, 1000-line enterprise-grade Venture Capital due diligence skill. Provides a massive, multi-stage workflow covering deep technical research, precise search methodologies, legal/commercial risk auditing, report synthesis, and advanced Excalidraw visual argumentation for any industry.
 ---
 
-# VC Diligence Skill: The Ultimate Lead Partner Framework (V24 - Visual Mastery & API Edition)
+# VC Diligence Skill: The Ultimate Lead Partner Framework (V25 - Master Hyper-Depth & Visual mastery Edition)
 
 This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting**, **Specialized Architecture Auditing**, **Product-Market Fit (PMF) Leveling**, and **Excalidraw Visual Mastery**. The goal is to produce an **intimate, 30+ page master audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
 
@@ -47,10 +47,12 @@ A brief summary is a failure. You are building an exhaustive legal and commercia
 13. [Phase 11.5: Formal Visual Design Specification](#145-phase-115-formal-visual-design-specification)
 14. [Phase 12: Synthesis - Master Deliverables Protocol](#15-phase-12-synthesis---master-deliverables-protocol)
 15. [Phase 12.5: The Iterative Master Expansion Step](#155-phase-125-the-iterative-master-expansion-step)
-16. [Phase 13: Advanced Visual Argumentation (Skill Delegation)](#16-phase-13-advanced-visual-argumentation-skill-delegation)
-17. [Phase 14: Formatting Audit (Tables vs. Bullets)](#17-phase-14-formatting-audit-tables-vs-bullets)
-18. [Phase 15: Excalidraw Technical Reference & JSON Protocol](#18-phase-15-excalidraw-technical-reference--json-protocol)
-19. [Phase 16: Final Quality Assurance & Hand-off](#19-phase-16-final-quality-assurance--hand-off)
+16. [Phase 12.6: Technical Context Gap-Filling (Deep Dive Expansion)](#156-phase-126-technical-context-gap-filling-deep-dive-expansion)
+17. [Phase 13: Advanced Visual Argumentation (Skill Delegation)](#16-phase-13-advanced-visual-argumentation-skill-delegation)
+18. [Phase 13.1: Visual Quality Assurance & Refinement Loop](#161-phase-131-visual-quality-assurance--refinement-loop)
+19. [Phase 14: Formatting Audit (Tables vs. Bullets)](#17-phase-14-formatting-audit-tables-vs-bullets)
+20. [Phase 15: Excalidraw Technical Reference & JSON Protocol](#18-phase-15-excalidraw-technical-reference--json-protocol)
+21. [Phase 16: Final Quality Assurance & Hand-off](#19-phase-16-final-quality-assurance--hand-off)
 
 ---
 
@@ -207,7 +209,21 @@ Once the initial draft of the `full_diligence_report.md` is complete, you MUST e
 
 ---
 
-## 10. PHASE 12: ADVANCED VISUAL ARGUMENTATION (SKILL DELEGATION)
+## 10. PHASE 11.6: TECHNICAL CONTEXT GAP-FILLING (DEEP DIVE EXPANSION)
+
+After generating the initial draft of the `technical_commercial_deep_dive.md`, you MUST perform a **Technical Gap Audit**:
+
+1.  **Identify "Thin" Sections**: Scan the document for generic technical descriptions (e.g., "They use cloud infrastructure").
+2.  **Reissue Deep Searches**: Execute 3-5 high-resolution queries specifically targeting missing primitives identified in research:
+    - **Specific Algorithms**: "Does [Startup] use [Specific Algorithm X] or [Variant Y]?"
+    - **Infrastructure Quirks**: "Is [Startup] on AWS Bedrock or using raw EC2 H100s?"
+    - **Data Flow Detail**: "What is the specific JSON payload for the [X] endpoint?"
+3.  **Future Diligence Mapping**: Add a "Technical Diligence Roadmap" section at the end of the Deep Dive, suggesting exactly where a future technical auditor should look (e.g., "Audit the specific weights of the Layer 4 aggregator").
+4.  **Inject Detail**: Expand the document by integrating these new findings into verbose paragraphs.
+
+---
+
+## 11. PHASE 12: ADVANCED VISUAL ARGUMENTATION (SKILL DELEGATION)
 
 **CRITICAL MANDATE**: Do NOT attempt to generate Excalidraw JSON manually. Use the `activate_skill` tool to invoke the `excalidraw-diagram` skill.
 
@@ -217,16 +233,30 @@ Once the initial draft of the `full_diligence_report.md` is complete, you MUST e
 
 ---
 
-## 11. PHASE 15: EXCALIDRAW TECHNICAL REFERENCE & JSON PROTOCOL
+## 12. PHASE 12.1: VISUAL QUALITY ASSURANCE & REFINEMENT LOOP
+
+Once diagrams are initially generated and rendered as PNGs, you MUST perform a **Visual Audit**:
+
+1.  **Rendering Check**: Inspect the PNG (or use `file` and `ls -lh`) to ensure it rendered correctly and contains text.
+2.  **Logic Consistency**: Does the diagram match the **Isomorphism Principle**? Does the structure make sense without reading labels?
+3.  **Refinement Round**: If the diagram is too crowded or lacks technical detail (failing the **Education Test**):
+    - Update the **Visual Design Specification** with more granular box labels and specific technical primitives.
+    - Re-delegate to the `excalidraw-diagram` skill.
+    - Re-render the PNG.
+4.  **Label Verification**: Ensure the **Two-Way Binding Rule** is strictly followed in the new version.
+
+---
+
+## 13. PHASE 15: EXCALIDRAW TECHNICAL REFERENCE & JSON PROTOCOL
 
 To ensure diagrams are high-quality and correctly rendered, follow these strict JSON schema rules.
 
-### 11.1 The Two-Way Binding Rule (CRITICAL)
+### 15.1 The Two-Way Binding Rule (CRITICAL)
 Every text element inside a container MUST be bound correctly to prevent empty boxes.
 1.  **Container (Rectangle/Ellipse/Diamond)**: Must have a `boundElements` array containing the text element's ID.
 2.  **Text Element**: Must have a `containerId` property pointing to the parent shape's ID.
 
-### 11.2 Semantic Color Palette
+### 15.2 Semantic Color Palette
 Use colors to encode meaning from `references/color-palette.md`:
 - **AI/LLM**: Fill `#ddd6fe`, Stroke `#6d28d9`
 - **Start/Trigger**: Fill `#fed7aa`, Stroke `#c2410c`
@@ -234,7 +264,7 @@ Use colors to encode meaning from `references/color-palette.md`:
 - **Decision**: Fill `#fef3c7`, Stroke `#b45309`
 - **Primary/Neutral**: Fill `#3b82f6`, Stroke `#1e3a5f`
 
-### 11.3 Element Template (JSON Example)
+### 15.3 Element Template (JSON Example)
 ```json
 {
   "elements": [
@@ -248,7 +278,7 @@ Use colors to encode meaning from `references/color-palette.md`:
       "boundElements": [{ "id": "text-01", "type": "text" }]
     },
     {
-      "id": "text-01",
+      "id": "node-01",
       "type": "text",
       "containerId": "node-01",
       "text": "L4: Deep Core Aggregator\n(600M+ Human Docs)",
@@ -262,7 +292,7 @@ Use colors to encode meaning from `references/color-palette.md`:
 }
 ```
 
-### 11.4 Visual Patterns for Arguments
+### 15.4 Visual Patterns for Arguments
 - **Spiral/Cycle**: For feedback loops (e.g., telemetry refining models).
 - **Assembly Line**: For data transformation pipelines.
 - **Fan-Out**: For single triggers spawning multiple effects.
@@ -270,10 +300,10 @@ Use colors to encode meaning from `references/color-palette.md`:
 
 ---
 
-## 12. FINAL QUALITY ASSURANCE & HAND-OFF
+## 14. FINAL QUALITY ASSURANCE & HAND-OFF
 
 ### 19.1 Hand-off
 "Diligence complete. Overview Memo, Deep Dive, and 30+ page Master Audit (with full feature teardowns, iteratively expanded details, and specialized visual diagrams) are in `deliverables/`."
 
 ---
-*End of VC Diligence Skill Masterclass V24.*
+*End of VC Diligence Skill Masterclass V25.*
