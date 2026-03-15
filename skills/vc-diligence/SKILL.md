@@ -63,36 +63,40 @@ mkdir -p diligence_[startup_name]/assets
 
 ## 4. PHASE 1: ADVANCED RECURSIVE SEARCH METHODOLOGY
 
-### 4.1 The Wave-Based Approach & Query Expansion
-For each wave, you MUST generate **3-5 variations** of queries (Broad, Technical, Keyword-First) to ensure high-resolution data retrieval.
+### 4.1 The Wave-Based Approach & Hypothesis Generation
+For each wave, the LLM MUST first generate **Internal Hypotheses** to guide the search. Do not search blindly; predict what the evidence will look like.
 
-**Wave 1: Identity & Early History**
-- `"[Startup Name]" launch OR Y Combinator OR TechCrunch`
-- `"[Startup Name]" "series A" funding date 2024 2025`
-- `site:crunchbase.com "[Startup Name]" funding history`
+**Wave 1: Identity & Early History (Hypothesis-First)**
+- **Hypothesis**: "Based on the startup name and brief, they likely participated in [Accelerator] or were founded by [Ex-BigTech] alum. They are likely solving [Specific Problem]."
+- **Queries**:
+  - `"[Startup Name]" launch OR Y Combinator OR TechCrunch`
+  - `"[Startup Name]" "series A" funding date 2024 2025`
+  - `site:crunchbase.com "[Startup Name]" funding history`
 
-**Wave 2: Founder Alpha (Technical & Academic)**
-- `"[Founder Name]" research OR thesis OR patents OR publications`
-- `"[Founder Name]" "github" OR "open-source" contributions`
-- `site:linkedin.com "[Founder Name]" "former" OR "founder"`
+**Wave 2: Founder Alpha (Technical & Academic Hypothesis)**
+- **Hypothesis**: "Founder A likely has a background in [Field] from [University]. Founder B likely managed [Product/Team] at [Previous Startup]."
+- **Queries**:
+  - `"[Founder Name]" research OR thesis OR patents OR publications`
+  - `"[Founder Name]" "github" OR "open-source" contributions`
+  - `site:linkedin.com "[Founder Name]" "former" OR "founder"`
 
-**Wave 3: Technical Architecture (The Deep Dive)**
-- `"[Startup Name]" architecture OR system diagram OR tech stack`
-- `"[Startup Name]" "API docs" OR "developer guide" filetype:pdf`
-- `"[Startup Name]" "benchmark" OR "latency" OR "throughput"`
+**Wave 3: Technical Architecture (Structural Hypothesis)**
+- **Hypothesis**: "The system likely uses a [Tech Stack/Pattern] (e.g., RAG, SAE, Vector DB) and depends on [Third-Party API] for core logic. Scalability is likely limited by [Constraint]."
+- **Queries**:
+  - `"[Startup Name]" architecture OR system diagram OR tech stack`
+  - `"[Startup Name]" "API docs" OR "developer guide" filetype:pdf`
+  - `"[Startup Name]" "benchmark" OR "latency" OR "throughput"`
 
-**Wave 4: Market & Exit Benchmarks (Hypothesis-First)**
-- **CRITICAL**: Do NOT assume direct "X vs Y" results exist. Many startups are niche or in stealth.
-- **Mental Modeling Step**: Before searching, the LLM MUST think: "Based on Waves 1-3, which industries is this disrupting? Who are the likely incumbents (Slow Giants) and emerging challengers?"
-- **Query Generation**: Generate queries based on these *internally generated* hypotheses (e.g., if the startup does 'AI for legal docs', search for 'incumbent legal CMS revenue 2025' or 'legal AI startup funding 2025').
-- **Standard Queries**:
+**Wave 4: Market & Exit Benchmarks (Strategic Hypothesis)**
+- **Hypothesis**: "This startup is disrupting [Market Segment]. Likely incumbents are [Slow Giants]. Exit multiples for this category are likely [X-Y] based on [Recent Deal]."
+- **Queries**:
   - `"[Proposed Category]" market size bottom-up analysis 2025`
   - `"[Hypothesized Competitor]" ARR 2024 2025 OR acquisition price`
   - `"[Industry]" M&A multiples 2025 "ARR"`
 
 ### 4.2 The Search Critic & Step-Back SOP
 Before executing any query:
-1. **Hypothesis Generation**: For Wave 4, propose 2-3 market categories and 3-5 potential competitors based on technical and founder insights from earlier waves.
+1. **Mental Model Check**: Does this query align with my internal hypothesis?
 2. **Critic Loop**: Is the query too conversational? Strip it down to high-signal keywords.
 3. **Step-Back**: If a specific technical query (e.g., a specific patch version) fails, step back to the broader product's compatibility or changelog.
 4. **Keyword Transformation**: Use operators like `filetype:pdf` or `site:github.com` to target primary sources.
@@ -118,6 +122,7 @@ Before concluding research, check if any **Model Context Protocol (MCP)** tools 
 ### 6.1 Pedigree & "Right to Win"
 - Does the team have "Bridge Talent" (experts in two distinct fields)?
 - Check for **Grit Signals**: First-gen students, competitive history, or early failures.
+- **Audit Step**: Cross-reference LinkedIn tenure with funding milestones. Did the founders stay through the hard times?
 
 ---
 
@@ -127,46 +132,66 @@ Before concluding research, check if any **Model Context Protocol (MCP)** tools 
 - **Engine**: Generic API calls vs. fine-tuned proprietary models.
 - **Integration**: Is it a "Bolt-on" or "Embedded Workflow"?
 - **Data Provenance**: Who owns the training data? Is it legally defensible?
+- **SOP**: Use `read_file` on API docs or whitepapers to identify proprietary logic vs. standard libraries.
 
 ---
 
 ## 8. PHASE 5: COMMERCIAL, FINANCIAL & UNIT ECONOMIC DILIGENCE
 
-### 7.1 Metrics to Hunt For
-- **Inference Cost**: Estimate the GPU burn per user.
-- **LTV/CAC**: Is the business sustainable?
-- **Retention**: Search for churn signals in communities (Reddit, Discord).
+You MUST move beyond "searching" for metrics and move into **Economic Modeling**.
+
+### 8.1 The Unit Economic Audit SOP
+1. **Inference Cost Modeling**: Based on the technical architecture (Phase 4), estimate the cost of one user interaction (GPU/Token cost).
+2. **GTM Strategy Mapping**: Map out the sales motion. Is it PLG (Product-Led Growth), Enterprise Sales, or Channel-Partnership based?
+3. **LTV/CAC Calculation**: Use industry benchmarks for the category (e.g., SaaS, Fintech) to predict if the current GTM is sustainable.
+4. **Churn Signal Hunting**: Actively search for "Negative Social Proof" in developer forums, Reddit, or review sites to identify retention risks.
 
 ---
 
 ## 9. PHASE 6: MARKET DYNAMICS, COMPETITIVE MOATS & EXIT BENCHMARKS
 
-- **Incumbents**: Who are the "Slow Giants"?
-- **Benchmarking**: Use real acquisition prices to model a 10x-100x return.
+You MUST construct a **Competitive Moat Matrix** that goes beyond simple feature lists.
+
+### 8.1 Market & Benchmarking SOP
+1. **The "Slow Giant" Audit**: Identify 3-5 legacy incumbents. Analyze their latest quarterly earnings (10-K/10-Q) to see if they are building competing AI capabilities.
+2. **The "Emerging Challenger" Audit**: Use `google_web_search` to find "stealth" or "seed" competitors mentioned in niche newsletters (e.g., The Information, Axios Pro).
+3. **Exit Multiple Benchmarking**: Find 3-5 recent acquisitions or IPOs in the sector. Calculate the Revenue/ARR multiple paid.
+4. **The Moat Test**: Rate the startup on 4 pillars: Network Effects, Switching Costs, Cost Advantage, and Intangible Assets (Patents/Brand).
 
 ---
 
 ## 10. PHASE 7: THE 2025-2026 AI IMPACT & INDUSTRY TREND ANALYSIS
 
-- **Agentic Shift**: Is the startup moving toward autonomous agents?
-- **Sovereign AI**: Does the architecture support regional data sovereignty?
-- **Small Models (SLMs)**: Are they using efficient inference (e.g., Llama 3 8B) to save costs?
+Analyze the startup's survival through the **"AI Platform Shift."**
+
+### 10.1 Trend Analysis SOP
+1. **Agentic Readiness**: Does the startup's API allow for autonomous agents to interact with it (MCP readiness)?
+2. **Sovereignty Check**: Can the product be deployed on-premise or in sovereign cloud regions (e.g., for EU/Healthcare)?
+3. **Efficiency Frontier**: Are they using "Small Models" (SLMs) or distillation to improve margins vs. competitors using large LLMs?
+4. **Platform Risk**: If OpenAI/Microsoft added this feature today, would the startup die? (The "Sherlocking" Test).
 
 ---
 
 ## 11. PHASE 8: THE MASTER VC DILIGENCE QUESTIONNAIRE (EXHAUSTIVE)
 
-Include these 100+ questions in your internal audit:
-- **Product**: "What is the time-to-value for a new user?"
-- **Tech**: "How is your architecture decoupled from model providers?"
-- **Legal**: "Who owns the AI-generated outputs?"
+Generate a custom list of **25-50 High-Conviction Questions** for the founders based on your findings.
+
+### 11.1 Questionnaire Generation SOP
+1. **Contextualize**: Do not use generic templates. Every question must reference a finding (e.g., "Given your reliance on [Provider X], how do you mitigate...")
+2. **The "Killer" Questions**: Focus on the 3 biggest risks identified in your research.
+3. **Evidence Validation**: Formulate questions that require the founder to provide data (e.g., "Show us the retention cohort data for Segment Y").
 
 ---
 
 ## 12. PHASE 9: LEGAL, REGULATORY & GOVERNANCE RISK AUDITING
 
-- **🔴 CRITICAL**: University IP overhang, missing 83(b) elections.
-- **🟠 MATERIAL**: Open-source license poisoning (AGPL), missing SOC 2.
+Conduct a **Legal & Regulatory Red-Flag Audit**.
+
+### 12.1 Legal Diligence SOP
+1. **IP Provenance Audit**: Search for patent filings or university IP agreements. Identify if the tech was developed during a PhD or at a previous employer.
+2. **Data Privacy Posture**: Check for GDPR/CCPA compliance in the privacy policy. Search for SOC 2 or ISO 27001 certifications.
+3. **Compliance Risk**: In regulated industries (Fintech/Health), audit their licensing status (e.g., "Do they have a money transmitter license?").
+4. **Governance Review**: Check for Board composition and 83(b) election mentions in early legal docs if available.
 
 ---
 
