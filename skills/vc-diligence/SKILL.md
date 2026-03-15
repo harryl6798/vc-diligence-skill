@@ -81,16 +81,21 @@ For each wave, you MUST generate **3-5 variations** of queries (Broad, Technical
 - `"[Startup Name]" "API docs" OR "developer guide" filetype:pdf`
 - `"[Startup Name]" "benchmark" OR "latency" OR "throughput"`
 
-**Wave 4: Market & Exit Benchmarks**
-- `"[Competitor Name]" ARR 2024 2025 OR acquisition price`
-- `"[Category]" market size bottom-up analysis 2025`
-- `EdTech M&A multiples 2025 "ARR"`
+**Wave 4: Market & Exit Benchmarks (Hypothesis-First)**
+- **CRITICAL**: Do NOT assume direct "X vs Y" results exist. Many startups are niche or in stealth.
+- **Mental Modeling Step**: Before searching, the LLM MUST think: "Based on Waves 1-3, which industries is this disrupting? Who are the likely incumbents (Slow Giants) and emerging challengers?"
+- **Query Generation**: Generate queries based on these *internally generated* hypotheses (e.g., if the startup does 'AI for legal docs', search for 'incumbent legal CMS revenue 2025' or 'legal AI startup funding 2025').
+- **Standard Queries**:
+  - `"[Proposed Category]" market size bottom-up analysis 2025`
+  - `"[Hypothesized Competitor]" ARR 2024 2025 OR acquisition price`
+  - `"[Industry]" M&A multiples 2025 "ARR"`
 
 ### 4.2 The Search Critic & Step-Back SOP
 Before executing any query:
-1. **Critic Loop**: Is the query too conversational? Strip it down to high-signal keywords.
-2. **Step-Back**: If a specific technical query (e.g., a specific patch version) fails, step back to the broader product's compatibility or changelog.
-3. **Keyword Transformation**: Use operators like `filetype:pdf` or `site:github.com` to target primary sources.
+1. **Hypothesis Generation**: For Wave 4, propose 2-3 market categories and 3-5 potential competitors based on technical and founder insights from earlier waves.
+2. **Critic Loop**: Is the query too conversational? Strip it down to high-signal keywords.
+3. **Step-Back**: If a specific technical query (e.g., a specific patch version) fails, step back to the broader product's compatibility or changelog.
+4. **Keyword Transformation**: Use operators like `filetype:pdf` or `site:github.com` to target primary sources.
 
 ### 4.3 The Recursive Loop SOP
 After each wave, you MUST perform an **Evidence Audit**:
