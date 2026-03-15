@@ -3,9 +3,9 @@ name: vc-diligence
 description: An exhaustive, 1000-line enterprise-grade Venture Capital due diligence skill. Provides a massive, multi-stage workflow covering deep technical research, precise search methodologies, legal/commercial risk auditing, report synthesis, and advanced Excalidraw visual argumentation for any industry.
 ---
 
-# VC Diligence Skill: The Ultimate Lead Partner Framework (V5 - Hyper-Depth & Recursive Edition)
+# VC Diligence Skill: The Ultimate Lead Partner Framework (V6 - Hyper-Depth & Visual Specification Edition)
 
-This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting**. The goal is to produce an **intimate, 15+ page audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
+This is the definitive handbook for executing the `vc-diligence` skill. It combines **Recursive Hypothesis-Driven Discovery** with **Hyper-Depth Content Harvesting** and **Formal Visual Argumentation**. The goal is to produce an **intimate, 15+ page audit** that identifies the technical plumbing, commercial moats, and legal red-flags of any startup.
 
 ## 0. PREREQUISITES & SETUP (CRITICAL)
 Before executing this skill, ensure the following dependencies are installed to support diagram rendering:
@@ -42,12 +42,13 @@ If direct information about a startup is scarce (e.g., stealth), you MUST resear
 9. [Phase 8: The Master VC Diligence Questionnaire (Exhaustive)](#11-phase-8-the-master-vc-diligence-questionnaire-exhaustive)
 10. [Phase 9: Legal, Regulatory & Governance Risk Auditing](#12-phase-9-legal-regulatory--governance-risk-auditing)
 11. [Phase 10: Visual Asset Acquisition & Content Richness](#13-phase-10-visual-asset-acquisition--content-richness)
-12. [Phase 11: Synthesis - Dual Deliverable Protocol (Detailed Reporting)](#14-phase-11-synthesis---dual-deliverable-protocol-detailed-reporting)
-13. [Phase 12: Advanced Visual Argumentation & PNG Export](#15-phase-12-advanced-visual-argumentation--png-export)
-14. [Phase 13: Formatting Audit (Tables vs. Bullets)](#16-phase-13-formatting-audit-tables-vs-bullets)
-15. [Phase 14: Excalidraw Master Templates](#17-phase-14-excalidraw-master-templates)
-16. [Phase 15: CRITICAL JSON Safety & Syntax Protocol](#18-phase-15-critical-json-safety--syntax-protocol)
-17. [Phase 16: Final Quality Assurance & Hand-off](#19-phase-16-final-quality-assurance--hand-off)
+12. [Phase 10.5: Formal Visual Design Specification](#135-phase-105-formal-visual-design-specification)
+13. [Phase 11: Synthesis - Dual Deliverable Protocol (Detailed Reporting)](#14-phase-11-synthesis---dual-deliverable-protocol-detailed-reporting)
+14. [Phase 12: Advanced Visual Argumentation & PNG Export](#15-phase-12-advanced-visual-argumentation--png-export)
+15. [Phase 13: Formatting Audit (Tables vs. Bullets)](#16-phase-13-formatting-audit-tables-vs-bullets)
+16. [Phase 14: Excalidraw Master Templates](#17-phase-14-excalidraw-master-templates)
+17. [Phase 15: CRITICAL JSON Safety & Syntax Protocol](#18-phase-15-critical-json-safety--syntax-protocol)
+18. [Phase 16: Final Quality Assurance & Hand-off](#19-phase-16-final-quality-assurance--hand-off)
 
 ---
 
@@ -299,6 +300,31 @@ Every asset MUST be verified to ensure it is a valid image and NOT an HTML "Not 
 
 ---
 
+## 13.5 PHASE 10.5: FORMAL VISUAL DESIGN SPECIFICATION
+
+Before creating Excalidraw diagrams, the LLM MUST write a **Visual Design Specification** that formalizes the "Visual Argument." This ensures that the diagrams are not generic but are built using the intimate details harvested in earlier phases.
+
+### 13.5.1 The Market Diagram Spec
+Define exactly what the market map looks like:
+- **Nodes**: List every incumbent (Slow Giant) and emerging challenger found in research.
+- **Segments**: Categorize the market into logical layers (e.g., "Legacy Verification," "Real-time Authorship," "Data Licensing").
+- **Moats**: Specify which moat pillars (4 Pillars) apply to each segment.
+- **Arrows**: Describe the "Displacement Path"—how the startup is eating the incumbent's market share.
+
+### 13.5.2 The Technical Architecture Spec
+Define the "Component-by-Component" teardown:
+- **Flow**: Map the data journey from "Input Content" through every hierarchical layer found in research.
+- **Gated Logic**: Describe the "Early Exit" or "Escalation" conditions between model layers (e.g., statistical vs. transformer).
+- **Constraints**: Annotate where the bottlenecks (latency, cost) exist based on documentation.
+- **Proprietary Moats**: Bold the components that are custom-built vs. off-the-shelf.
+
+### 13.5.3 Relevant Graphs & Data Visuals
+Specify any remaining relevant graphs that would make good diagrams (e.g., Growth Trajectories, Unit Economic Comparisons):
+- **Data Points**: List the exact metrics found (ARR, headcount, cost per scan).
+- **Axis Logic**: Define what the X and Y axes represent to prove the "Viral Growth" or "Inference Flip" thesis.
+
+---
+
 ## 14. PHASE 11: SYNTHESIS - THE 15-PAGE DEEP DIVE PROTOCOL
 
 You MUST generate TWO primary documents. **Detailed, verbose reporting is mandatory.**
@@ -317,11 +343,12 @@ You MUST generate TWO primary documents. **Detailed, verbose reporting is mandat
 - **Visuals**: Founder headshots, ALL diagrams, embedded code snippets.
 - **Sections Required**:
     1. **Founder Deep Audit**: Narrative alpha, "Social Graph" analysis, and "Talent Spikes."
-    2. **Architectural Teardown**: Detailed component-by-component analysis with diagrams.
-    3. **Economic Modeling**: Unit economics, inference cost estimates, and LTV/CAC projections.
-    4. **Market Map & Moat Matrix**: 4-pillar moat audit and competitor displacement analysis.
-    5. **Risk & Platform Displacement**: The "Sherlocking" test and regulatory red-flags.
-    6. **Master Questionnaire**: 20+ contextualized "Killer Questions."
+    2. **Visual Design Specification**: Detailed textual plan for all diagrams (Market, Tech, Graphs).
+    3. **Architectural Teardown**: Detailed component-by-component analysis with diagrams.
+    4. **Economic Modeling**: Unit economics, inference cost estimates, and LTV/CAC projections.
+    5. **Market Map & Moat Matrix**: 4-pillar moat audit and competitor displacement analysis.
+    6. **Risk & Platform Displacement**: The "Sherlocking" test and regulatory red-flags.
+    7. **Master Questionnaire**: 20+ contextualized "Killer Questions."
 
 ---
 
@@ -364,4 +391,4 @@ Before finalizing, perform a structural audit to maximize readability:
 Overview Memo and 15+ page Deep Dive (with visuals, diagrams, and intimate technical details) are in `deliverables/`."
 
 ---
-*End of VC Diligence Skill Masterclass V5.*
+*End of VC Diligence Skill Masterclass V6.*
