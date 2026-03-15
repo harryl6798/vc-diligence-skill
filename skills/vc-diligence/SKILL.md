@@ -350,15 +350,22 @@ You MUST generate THREE primary documents. **Detailed, verbose reporting is mand
     6. **Risk & Platform Displacement**: The "Sherlocking" test and regulatory red-flags.
     7. **Master Questionnaire**: 20+ contextualized "Killer Questions."
 
-### 14.3 `full_diligence_report.md` (The Comprehensive Data Dump & Final Verdict)
-- **Length**: Highly exhaustive compilation of all retrieved data.
-- **Purpose**: A complete "dump" of everything retrieved during the diligence process, structured logically.
-- **Sections Required**:
-    1. **Capital & Cap Table**: Partners that have invested, full history of funding rounds, valuations, and growth velocity.
-    2. **Founder Backgrounds**: Complete histories, academic pedigrees, past companies, and talent density.
-    3. **Competitive Landscape Analysis**: Deep analysis of incumbents, stealth challengers, and market displacement.
-    4. **All Raw Findings**: Integration of every significant piece of data collected across all Waves.
-    5. **Final Investment Recommendation**: At the very end, a detailed verdict on whether we should invest, providing specific points and specific reasons based on the accumulated evidence.
+### 14.3 `full_diligence_report.md` (The Comprehensive Master Audit)
+- **Length**: Highly exhaustive (30+ pages of raw and synthesized data).
+- **Purpose**: A complete "Truth File" containing every piece of evidence, data point, and analytical thought generated during the process.
+- **Detailed Sections Required**:
+    1.  **Executive Summary**: A 3-paragraph distillation of the entire 30-page document.
+    2.  **Company Profile & Identity**: Mission, legal structure, historical pivots, and current core product offering.
+    3.  **The "Founder Alpha" Audit**: Exhaustive bios, academic publication history, patent audits, and "Social Graph" (who they know and who they've worked for).
+    4.  **Financing & Capital Structure**: Complete history of rounds, specific lead partners, board composition, and valuation growth velocity.
+    5.  **Product & Technical Architecture**: Component-by-component teardown of the "Plumbing," tech stack choices, and identified infrastructure bottlenecks.
+    6.  **Market Dynamics & Industry Trends**: Detailed TAM/SAM/SOM modeling, 2025-2026 platform shift analysis, and regulatory tailwinds.
+    7.  **Competitive Landscape Matrix**: Feature-by-feature comparison with incumbents (Slow Giants) and stealth challengers, including Displacement Economics.
+    8.  **Commercials & Unit Economics**: GTM strategy mapping, LTV/CAC projections, inference cost modeling, and churn signal analysis.
+    9.  **Legal, Regulatory & Governance**: IP provenance audit, data privacy posture (GDPR/CCPA/FERPA), and material risk assessment.
+    10. **The Master Research Appendix**: A structured compilation of ALL raw text and sources harvested during the Content Harvesting Protocol (Phase 1.5).
+    11. **The Investment Thesis (Detail)**: 5-7 specific points of conviction and 3-5 specific "Risks to Monitor."
+    12. **The Final Verdict**: A definitive "Invest / No Invest" call with a detailed rationale explaining the "Why" behind the decision.
 
 ---
 
