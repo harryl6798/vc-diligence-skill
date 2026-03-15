@@ -142,6 +142,7 @@ You MUST move beyond "searching" for metrics and move into **Economic Modeling**
 
 ### 8.1 The Unit Economic Audit SOP
 1. **Inference Cost Modeling**: Based on the technical architecture (Phase 4), estimate the cost of one user interaction (GPU/Token cost).
+    - *Example*: For a Gen-AI video startup, model the cost per minute of video generated against the subscription price ($29/mo). If GPU cost is $2/min and average user generates 20 mins, unit economics are negative ($40 cost vs $29 revenue).
 2. **GTM Strategy Mapping**: Map out the sales motion. Is it PLG (Product-Led Growth), Enterprise Sales, or Channel-Partnership based?
 3. **LTV/CAC Calculation**: Use industry benchmarks for the category (e.g., SaaS, Fintech) to predict if the current GTM is sustainable.
 4. **Churn Signal Hunting**: Actively search for "Negative Social Proof" in developer forums, Reddit, or review sites to identify retention risks.
@@ -154,6 +155,7 @@ You MUST construct a **Competitive Moat Matrix** that goes beyond simple feature
 
 ### 8.1 Market & Benchmarking SOP
 1. **The "Slow Giant" Audit**: Identify 3-5 legacy incumbents. Analyze their latest quarterly earnings (10-K/10-Q) to see if they are building competing AI capabilities.
+    - *Example*: In 'AI for Customer Support', identify Zendesk and Salesforce as 'Slow Giants'. Search their recent acquisitions (e.g., Zendesk acquiring Klaus) to set exit benchmarks.
 2. **The "Emerging Challenger" Audit**: Use `google_web_search` to find "stealth" or "seed" competitors mentioned in niche newsletters (e.g., The Information, Axios Pro).
 3. **Exit Multiple Benchmarking**: Find 3-5 recent acquisitions or IPOs in the sector. Calculate the Revenue/ARR multiple paid.
 4. **The Moat Test**: Rate the startup on 4 pillars: Network Effects, Switching Costs, Cost Advantage, and Intangible Assets (Patents/Brand).
@@ -169,17 +171,55 @@ Analyze the startup's survival through the **"AI Platform Shift."**
 2. **Sovereignty Check**: Can the product be deployed on-premise or in sovereign cloud regions (e.g., for EU/Healthcare)?
 3. **Efficiency Frontier**: Are they using "Small Models" (SLMs) or distillation to improve margins vs. competitors using large LLMs?
 4. **Platform Risk**: If OpenAI/Microsoft added this feature today, would the startup die? (The "Sherlocking" Test).
+    - *Example*: For a medical coding startup, evaluate if Epic (EHR giant) is releasing an internal medical coding agent. If Epic's 'Ambient AI' covers 80% of features, risk is 🔴 CRITICAL.
 
 ---
 
 ## 11. PHASE 8: THE MASTER VC DILIGENCE QUESTIONNAIRE (EXHAUSTIVE)
 
-Generate a custom list of **25-50 High-Conviction Questions** for the founders based on your findings.
+Generate a custom list of **25-50 High-Conviction Questions** for the founders. The LLM MUST select the most relevant questions from the pools below based on the startup's specific industry and stage.
 
-### 11.1 Questionnaire Generation SOP
-1. **Contextualize**: Do not use generic templates. Every question must reference a finding (e.g., "Given your reliance on [Provider X], how do you mitigate...")
-2. **The "Killer" Questions**: Focus on the 3 biggest risks identified in your research.
-3. **Evidence Validation**: Formulate questions that require the founder to provide data (e.g., "Show us the retention cohort data for Segment Y").
+### 11.1 Master Question Pool by Category
+
+**Category A: Technology & AI Moat**
+1. "What is your proprietary data advantage? Is the data unique, or is it public data with a unique cleaning/labeling process?"
+2. "How do you handle 'hallucinations' in a production environment where accuracy is 🔴 CRITICAL (e.g., legal, medical)?"
+3. "Are you fine-tuning your own models, or are you essentially a sophisticated wrapper around OpenAI/Anthropic?"
+4. "What is your strategy for model-agnosticism? How easily can you switch providers if pricing or performance changes?"
+5. "Do you have token-level or query-level usage tracking for attribution and monetization?"
+
+**Category B: Product & Market Fit**
+1. "Who is the 'Economic Buyer' vs. the 'Daily User'? How do you bridge the gap between user delight and buyer ROI?"
+2. "What is the 'Time to Value' (TTV) for a new enterprise customer? How much manual 'implementation' or 'consulting' is required?"
+3. "Is this a 'Nice to Have' (efficiency gain) or a 'Must Have' (revenue generation or compliance necessity)?"
+4. "How does your product integrate with existing legacy workflows (e.g., SAP, Salesforce, Epic)?"
+5. "What is the 'Magic Moment' for a user where they realize this product is indispensable?"
+
+**Category C: Commercial & Unit Economics**
+1. "Walk us through the marginal cost of one user query. What is the GPU/Token burn as you scale?"
+2. "What is your GTM 'Wedge'? How do you get into an organization, and what is the 'Expansion' path?"
+3. "What are your net revenue retention (NRR) targets? How do you defend against churn from 'AI experimentation' budgets?"
+4. "Is your pricing model aligned with user value (e.g., per-outcome) or just seat-based (per-user)?"
+5. "Who are your top 3 'Loss-Leader' competitors who might use predatory pricing to gain market share?"
+
+**Category D: Team & Culture**
+1. "What is the 'Bridge Talent' in this team? (e.g., 10 years in Publishing + 5 years in AI)."
+2. "How did the founders meet, and what is the 'Conflict Resolution' history?"
+3. "What is the single biggest technical or commercial failure the team has navigated in the last 12 months?"
+4. "How do you attract 'A-tier' AI talent in a market where BigTech can pay $500k+ salaries?"
+5. "Who is the 'Philosophical Anchor' on the team ensuring the product remains ethical/compliant?"
+
+**Category E: Legal, Regulatory & IP**
+1. "Do you have clear ownership of all IP developed during the pre-seed/academic phase?"
+2. "What is your posture on 'Fair Use' vs. 'Licensed Access' for your training/inference data?"
+3. "In which jurisdictions are you currently compliant (GDPR, CCPA, HIPAA)?"
+4. "Are there any 'Hidden Liens' or 'University IP Overhangs' from previous research work?"
+5. "What happens to the user's data? Is it used to train your models, or is it kept in a sovereign silo?"
+
+### 11.2 Questionnaire Generation SOP
+1. **Selection**: Pick 15-20 questions from the pool above that match the startup's current wave findings.
+2. **Contextualize**: Reference specific findings (e.g., "Given your reliance on [Provider X], how do you mitigate...").
+3. **The "Killer" Questions**: Focus on the 3 biggest risks identified in your research.
 
 ---
 
@@ -190,8 +230,9 @@ Conduct a **Legal & Regulatory Red-Flag Audit**.
 ### 12.1 Legal Diligence SOP
 1. **IP Provenance Audit**: Search for patent filings or university IP agreements. Identify if the tech was developed during a PhD or at a previous employer.
 2. **Data Privacy Posture**: Check for GDPR/CCPA compliance in the privacy policy. Search for SOC 2 or ISO 27001 certifications.
-3. **Compliance Risk**: In regulated industries (Fintech/Health), audit their licensing status (e.g., "Do they have a money transmitter license?").
-4. **Governance Review**: Check for Board composition and 83(b) election mentions in early legal docs if available.
+3. **Compliance Risk**: In regulated industries (Fintech/Health), audit their licensing status.
+    - *Example*: For a UK Fintech, verify if they hold an EMI license or rely on a third-party 'BaaS' provider. If the provider is Railsr (known issues), risk is 🟠 MATERIAL.
+4. **Governance Review**: Check for Board composition and 83(b) election mentions.
 
 ---
 
