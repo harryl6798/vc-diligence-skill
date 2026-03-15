@@ -325,9 +325,9 @@ Specify any remaining relevant graphs that would make good diagrams (e.g., Growt
 
 ---
 
-## 14. PHASE 11: SYNTHESIS - THE 15-PAGE DEEP DIVE PROTOCOL
+## 14. PHASE 11: SYNTHESIS - THE MASTER DELIVERABLES PROTOCOL
 
-You MUST generate TWO primary documents. **Detailed, verbose reporting is mandatory.**
+You MUST generate THREE primary documents. **Detailed, verbose reporting is mandatory.**
 
 ### 14.1 `overview_memo.md` (The Partner Summary)
 - **Length**: 2-3 pages.
@@ -343,12 +343,22 @@ You MUST generate TWO primary documents. **Detailed, verbose reporting is mandat
 - **Visuals**: Founder headshots, ALL diagrams, embedded code snippets.
 - **Sections Required**:
     1. **Founder Deep Audit**: Narrative alpha, "Social Graph" analysis, and "Talent Spikes."
-    2. **Visual Design Specification**: Detailed textual plan for all diagrams (Market, Tech, Graphs).
-    3. **Architectural Teardown**: Detailed component-by-component analysis with diagrams.
+    2. **Architectural Teardown**: Detailed component-by-component analysis with diagrams.
+    3. **Visual Design Specification**: Detailed textual plan written *after* the teardown, explaining exactly what the Market Diagram, Technical Architecture Diagram, and any other relevant data graphs (e.g., Growth Trajectories) look like with all details.
     4. **Economic Modeling**: Unit economics, inference cost estimates, and LTV/CAC projections.
     5. **Market Map & Moat Matrix**: 4-pillar moat audit and competitor displacement analysis.
     6. **Risk & Platform Displacement**: The "Sherlocking" test and regulatory red-flags.
     7. **Master Questionnaire**: 20+ contextualized "Killer Questions."
+
+### 14.3 `full_diligence_report.md` (The Comprehensive Data Dump & Final Verdict)
+- **Length**: Highly exhaustive compilation of all retrieved data.
+- **Purpose**: A complete "dump" of everything retrieved during the diligence process, structured logically.
+- **Sections Required**:
+    1. **Capital & Cap Table**: Partners that have invested, full history of funding rounds, valuations, and growth velocity.
+    2. **Founder Backgrounds**: Complete histories, academic pedigrees, past companies, and talent density.
+    3. **Competitive Landscape Analysis**: Deep analysis of incumbents, stealth challengers, and market displacement.
+    4. **All Raw Findings**: Integration of every significant piece of data collected across all Waves.
+    5. **Final Investment Recommendation**: At the very end, a detailed verdict on whether we should invest, providing specific points and specific reasons based on the accumulated evidence.
 
 ---
 
