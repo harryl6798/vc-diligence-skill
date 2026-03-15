@@ -28,7 +28,7 @@ You are building a legal and commercial case for the deployment of millions of d
 
 ## 2. TABLE OF CONTENTS
 1. [Phase 0: Workspace Architecture & Initialization](#3-phase-0-workspace-architecture--initialization)
-2. [Phase 1: Advanced Recursive Search Methodology](#4-phase-1-advanced-recursive-search-methodology)
+2. [Phase 1: Objective-Oriented Recursive Search](#4-phase-1-objective-oriented-recursive-search)
 3. [Phase 2: MCP Service Discovery & Third-Party Intelligence](#5-phase-2-mcp-service-discovery--third-party-intelligence)
 4. [Phase 3: The Founder Alpha & Team Audit](#6-phase-3-the-founder-alpha--team-audit)
 5. [Phase 4: Technical Architecture & System Audit](#7-phase-4-technical-architecture--system-audit)
@@ -61,45 +61,37 @@ mkdir -p diligence_[startup_name]/assets
 
 ---
 
-## 4. PHASE 1: ADVANCED RECURSIVE SEARCH METHODOLOGY
+## 4. PHASE 1: OBJECTIVE-ORIENTED RECURSIVE SEARCH
 
-### 4.1 The Wave-Based Approach & Hypothesis Generation
-For each wave, the LLM MUST first generate **Internal Hypotheses** to guide the search. Do not search blindly; predict what the evidence will look like.
+Do NOT use hard-coded queries. Every search MUST be driven by a **Central Question** and an **Internal Hypothesis**. The LLM has full autonomy to craft queries that maximize signal-to-noise for the specific context.
 
-**Wave 1: Identity & Early History (Hypothesis-First)**
-- **Hypothesis**: "Based on the startup name and brief, they likely participated in [Accelerator] or were founded by [Ex-BigTech] alum. They are likely solving [Specific Problem]."
-- **Queries**:
-  - `"[Startup Name]" launch OR Y Combinator OR TechCrunch`
-  - `"[Startup Name]" "series A" funding date 2024 2025`
-  - `site:crunchbase.com "[Startup Name]" funding history`
+### 4.1 The Wave-Based Discovery Objectives
 
-**Wave 2: Founder Alpha (Technical & Academic Hypothesis)**
-- **Hypothesis**: "Founder A likely has a background in [Field] from [University]. Founder B likely managed [Product/Team] at [Previous Startup]."
-- **Queries**:
-  - `"[Founder Name]" research OR thesis OR patents OR publications`
-  - `"[Founder Name]" "github" OR "open-source" contributions`
-  - `site:linkedin.com "[Founder Name]" "former" OR "founder"`
+**Wave 1: Identity, Trajectory & Capital Structure**
+- **Central Question**: "Who is this company at its core, how much capital have they consumed, and what is their growth velocity?"
+- **Hypothesis Generation**: Predict their funding stage, lead investors, and key milestones based on the name/brief.
+- **Search Intent**: Find the "Source of Truth" for company history (Crunchbase, Pitchbook, Press Releases).
 
-**Wave 3: Technical Architecture (Structural Hypothesis)**
-- **Hypothesis**: "The system likely uses a [Tech Stack/Pattern] (e.g., RAG, SAE, Vector DB) and depends on [Third-Party API] for core logic. Scalability is likely limited by [Constraint]."
-- **Queries**:
-  - `"[Startup Name]" architecture OR system diagram OR tech stack`
-  - `"[Startup Name]" "API docs" OR "developer guide" filetype:pdf`
-  - `"[Startup Name]" "benchmark" OR "latency" OR "throughput"`
+**Wave 2: Founder Alpha & Talent Density**
+- **Central Question**: "Why is this specific team uniquely qualified to win this category, and what are their individual 'superpowers'?"
+- **Hypothesis Generation**: Predict founder backgrounds (Academic, BigTech, Serial Founder) and their likely "Right to Win."
+- **Search Intent**: Find "Primary Evidence" of expertise (Patents, Github, Published Research, LinkedIn tenure).
 
-**Wave 4: Market & Exit Benchmarks (Strategic Hypothesis)**
-- **Hypothesis**: "This startup is disrupting [Market Segment]. Likely incumbents are [Slow Giants]. Exit multiples for this category are likely [X-Y] based on [Recent Deal]."
-- **Queries**:
-  - `"[Proposed Category]" market size bottom-up analysis 2025`
-  - `"[Hypothesized Competitor]" ARR 2024 2025 OR acquisition price`
-  - `"[Industry]" M&A multiples 2025 "ARR"`
+**Wave 3: Technical Architecture & Product Moat**
+- **Central Question**: "Is the technology a defensible moat or a thin wrapper, and what are the critical system constraints?"
+- **Hypothesis Generation**: Predict the tech stack, data provenance, and likely points of failure (latency, cost, accuracy).
+- **Search Intent**: Find "Technical Artifacts" (API documentation, whitepapers, developer forums, system diagrams).
 
-### 4.2 The Search Critic & Step-Back SOP
-Before executing any query:
-1. **Mental Model Check**: Does this query align with my internal hypothesis?
-2. **Critic Loop**: Is the query too conversational? Strip it down to high-signal keywords.
-3. **Step-Back**: If a specific technical query (e.g., a specific patch version) fails, step back to the broader product's compatibility or changelog.
-4. **Keyword Transformation**: Use operators like `filetype:pdf` or `site:github.com` to target primary sources.
+**Wave 4: Market Dynamics & Competitive Displacement**
+- **Hypothesis-First (MANDATORY)**: Based on Waves 1-3, define the *disrupted market* and name the *likely incumbents* (Slow Giants) and *emerging challengers*.
+- **Central Question**: "Which $B+ market is being eaten, who are the incumbents being displaced, and what are the exit benchmarks for this category?"
+- **Search Intent**: Validate the internally generated market map and find "Financial Benchmarks" (ARR of competitors, M&A multiples).
+
+### 4.2 The Search Critic & Intent SOP
+Before executing ANY query, the LLM MUST think:
+1. **The Objective**: "What specific piece of evidence am I missing to answer the Central Question of this wave?"
+2. **The Query Selection**: "Does this query use high-signal keywords and operators (site:, filetype:, -inurl:)?"
+3. **The 'Google Assumption' Check**: "Am I assuming Google has a direct answer? If not, how do I search for 'proxies' of this info?" (e.g., search for job descriptions to find the tech stack).
 
 ### 4.3 The Recursive Loop SOP
 After each wave, you MUST perform an **Evidence Audit**:
