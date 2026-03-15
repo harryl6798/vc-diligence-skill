@@ -75,6 +75,16 @@ Do NOT use hard-coded queries. Every search MUST be driven by a **Central Questi
 
 ### 4.1 The Wave-Based Discovery Objectives (Hyper-Depth)
 
+**Wave 0: Product DNA & User Persona (The Foundation)**
+- **Central Question**: "What exactly is the product, how does it function for the end-user, and who are the core personas it serves?"
+- **The Guiding Mandate**: This wave is the most critical as it defines the scope of all subsequent waves. You MUST understand the 'Jobs to be Done' before you can audit the 'Right to Win'.
+- **Discovery Specifics**:
+    - **Feature Inventory**: List every distinct product feature and its primary utility.
+    - **User Personas**: Identify the 'Daily User', the 'Economic Buyer', and the 'Affected Stakeholder'.
+    - **UX/Workflow Mapping**: How does the user interact with the product? (e.g., API vs. Web UI vs. Browser Extension).
+    - **Value Proposition**: What is the core pain point being solved (e.g., Time savings, Revenue generation, Risk mitigation)?
+- **Example Evidence**: A 'How it Works' page; a user manual; onboarding tutorials; detailed customer testimonials describing specific use cases.
+
 **Wave 1: Identity, Trajectory & Capital Structure**
 - **Central Question**: "Who is this company at its core, how much capital have they consumed, and what is their growth velocity?"
 - **Discovery Specifics**:
