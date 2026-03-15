@@ -100,8 +100,12 @@ Do NOT use hard-coded queries. Every search MUST be driven by a **Hypothesis-Fir
 - **Example Evidence**: An API reference describing a custom auth layer; a developer's GitHub repo showing contributions to an open-source library.
 
 **Wave 4: Market Dynamics & Competitive Displacement**
-- **Hypothesis-First (MANDATORY)**: Based on Waves 1-3, define the *disrupted market* and name the *likely incumbents* (Slow Giants) and *emerging challengers*.
 - **Central Question**: "Which $B+ market is being eaten, who are the incumbents being displaced, and what are the exit benchmarks for this category?"
+- **The Synthesis Mandate**: Do NOT search for high-level conclusions like `"[Startup] TAM SAM SOM"` or `"[Startup] GTM strategy"`. Google does not have these answers. Instead, search for **Atomic Facts**:
+    - **Market Size Proxies**: Search for "Total addressable market of [Industry Sector]" or "Total number of [Target User Profile] in [Region]".
+    - **Pricing Proxies**: Search for "[Competitor] pricing" or "[Incumbent] revenue per user".
+    - **Adoption Proxies**: Search for "[Competitor] customer count" or "Top players in [Sector] by market share".
+- **Hypothesis-First (MANDATORY)**: Based on Waves 1-3, define the *disrupted market* and name the *likely incumbents* (Slow Giants) and *emerging challengers*.
 - **Intimate Targets**: 
     - Competitor pricing "Leakage" (found in RFP responses or government procurement docs).
     - "Negative Social Proof": Search for Reddit/Discord threads where users complain about incumbents.
@@ -119,8 +123,8 @@ For every Central Question or Hypothesis, you MUST generate a **fanout of 3-5 di
 Before executing ANY query, the LLM MUST think:
 1. **The Objective**: "What specific piece of evidence am I missing to answer the Central Question of this wave?"
 2. **The Fanout Plan**: "What are my 3-5 distinct angles for this objective?"
-3. **The Query Selection**: "Does each query use high-signal keywords and operators (site:, filetype:, -inurl:)?"
-4. **The 'Google Assumption' Check**: "Am I assuming Google has a direct answer? If not, how do I search for 'proxies' of this info?"
+3. **The 'Reasonable Searchability' Check**: "Am I assuming Google has a direct answer to a high-level question (e.g., 'What is X's GTM strategy?')? If so, stop. Search for the **atomic ingredients** (e.g., job postings for sales roles, pricing pages, partner lists) and synthesize the answer yourself."
+4. **The Query Selection**: "Does each query use high-signal keywords and operators (site:, filetype:, -inurl:)?"
 
 ### 4.4 The Content Harvesting Protocol (MANDATORY)
 To achieve 15+ pages, you MUST harvest raw text volume.
