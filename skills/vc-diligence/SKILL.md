@@ -119,12 +119,13 @@ For every Central Question or Hypothesis, you MUST generate a **fanout of 3-5 di
 - **Angle 3: Technical/Source-Specific**: Target deep sources (e.g., `site:github.com`, `filetype:pdf`, or `site:docs.[startup].io`).
 - **Angle 4: Competitive/Market Context**: (e.g., `"[Startup] vs [Competitor]"`, or incumbent quarterly reports).
 
-### 4.3 The Search Critic & Intent SOP
-Before executing ANY query, the LLM MUST think:
-1. **The Objective**: "What specific piece of evidence am I missing to answer the Central Question of this wave?"
-2. **The Fanout Plan**: "What are my 3-5 distinct angles for this objective?"
-3. **The 'Reasonable Searchability' Check**: "Am I assuming Google has a direct answer to a high-level question (e.g., 'What is X's GTM strategy?')? If so, stop. Search for the **atomic ingredients** (e.g., job postings for sales roles, pricing pages, partner lists) and synthesize the answer yourself."
-4. **The Query Selection**: "Does each query use high-signal keywords and operators (site:, filetype:, -inurl:)?"
+### 4.3 The Search Critic & Intent SOP (Least-to-Most Protocol)
+Before executing ANY query, the LLM MUST apply **Least-to-Most Prompting** to identify what it doesn't know:
+1. **Decomposition**: "Break the Central Question down into the fundamental sub-questions that need to be answered first." (e.g., instead of searching for "GPTZero moat," break it into "What is their primary technical dependency?" and "What is the cost of simulating their telemetry?").
+2. **Sequential Solving**: "Solve each sub-question one by one, using the answer from the previous step to inform the next search angle."
+3. **The Fanout Plan**: Assign at least one specific query angle to each sub-question identified during decomposition.
+4. **The 'Reasonable Searchability' Check**: "Am I assuming Google has a direct answer? If so, stop. Search for the **atomic ingredients** instead of the **finished meal**."
+5. **Synthesis**: "Based on these individual findings, construct a generalized argument that addresses the original Central Question."
 
 ### 4.4 The Content Harvesting Protocol (MANDATORY)
 To achieve 15+ pages, you MUST harvest raw text volume.
