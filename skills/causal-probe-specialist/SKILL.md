@@ -5,26 +5,26 @@ description: Specializes in "Causal Intervention" and "Diffusion Probing" for mo
 
 # Causal Probe Specialist: The Verification Auditor
 
-This agent specializes in "Causal Probing"—the process of proving a model's logic through visual intervention. It focuses on using diffusion models to verify that identified SAE features actually correspond to physical pathologies in a medical scan.
+This agent specializes in "Causal Probing"—proving a model's internal logic through visual counterfactuals.
 
 ## 1. DETAILED OVERVIEW
-In medicine, a model saying "this is a fracture" is not enough; the doctor needs to know *why* the model said it. The Causal Probe Specialist audits the link between the model's internal neurons and the physical pixels. By using conditional diffusion models, it provides "Mathematical Proof" of diagnostic claims, effectively ending the era of unverified AI heatmaps (saliency maps).
+Causal probing answers the clinician's ultimate question: *"If I change the AI's thoughts, does the image actually change?"* It is the most rigorous form of AI auditing available.
 
-## 2. IN-DEPTH TECHNICAL ANALYSIS
+## 2. FUNCTIONAL ANATOMY: THE VERIFICATION LOOP
 
-### 2.1 The Diffusion Counterfactual Loop
-Standard AI uses "Saliency Maps" (Grad-CAM) which highlight regions. These are notoriously unreliable and can highlight artifacts (like a hospital ruler) instead of the pathology. 
-- **The Mecha Solution**: Counterfactual Probing.
-- **The Mechanism**: A Diffusion Model is trained to be "conditioned" on the SAE features.
-- **The Intervention**: If the AI detects a "Pneumothorax" (collapsed lung), the Specialist manually "toggles off" the specific SAE neuron associated with that pathology.
-- **The Proof**: The Diffusion Model regenerates the image with that feature subtracted. If the lung reinflates in the new image, we have causal proof the AI was looking at the right visual markers.
-- **Complexity Explanation**: It's like having a suspect in a lineup. To be sure you have the right one, you remove them and see if the crime stops happening. If removing "Feature #1024" removes the "Pleural Effusion" from the picture, the model's logic is verified.
+### 2.1 The "Ablation" Experiment
+1.  **Hypothesis**: The AI claims "Nodule in right lung" because "Feature #56" is active.
+2.  **Intervention (Ablation)**: The system manually forces the activation of "Feature #56" to ZERO in the latent space.
+3.  **Reconstruction**: The modified latent vector is passed to a conditional **Diffusion Model** (Mecha-Diff).
+4.  **Comparison**: The specialist compares the original scan with the newly generated scan.
+5.  **Causal Proof**: If the nodule vanishes in the new image (and everything else remains the same), the model is verified. If the nodule stays, the AI is hallucinating or looking at the wrong pixels.
 
-### 2.2 Clinical Value of Probing
-This process builds a "Verification Layer" that is essential for FDA approval and medical liability. It allows radiologists to "interrogate" the AI's internal thoughts by seeing the visual consequences of its decisions.
+### 2.2 Why This Solves the "Shortcut" Problem
+- **The Problem**: AI often learns shortcuts (e.g., "This X-ray is from the ICU, so the patient must be sick").
+- **The Probe**: If you ablate the "ICU Watermark" feature and the pathology remains, the model is using valid anatomical signals. If the pathology vanishes when you ablate the watermark, you have caught a critical failure mode.
 
 ## 3. SUMMARY
-The Causal Probe Specialist moves AI from "Correlation" to "Causation." By using diffusion-based counterfactuals, it provides the visual evidence required for clinical trust, ensuring that the AI is identifying biological markers rather than taking "Shortcuts."
+The Causal Probe Specialist turns "Trust" into "Proof." It allows clinicians to visually interrogate the model's logic, ensuring that every word in a report is causally tied to a specific anatomical feature.
 
 ---
 *End of Causal Probe Specialist Skill.*

@@ -5,27 +5,30 @@ description: Specializes in the "SAE-Rad" pipeline. Analyzes latent disentanglem
 
 # SAE-Rad Factory: The Disentanglement Expert
 
-This agent specializes in the mechanics of Sparse Autoencoders (SAEs) applied to radiology. It focuses on how jumbled "Superposition" is unpacked into discrete, monosemantic features.
+This agent specializes in the functional anatomy of Sparse Autoencoders (SAEs) applied to radiology.
 
 ## 1. DETAILED OVERVIEW
-The SAE-Rad Factory is responsible for the "Forensic Sorting" of neural activations. It takes the dense, uninterpretable cloud of a Vision Transformer (ViT) and passes it through a high-dimensional dictionary layer. This layer identifies specific clinical concepts (features) that are active in the scan, ensuring the final report is a compilation of verified facts rather than a generated narrative.
+SAE-Rad is a "Clinical Disentanglement Engine." It replaces the "Black-Box" reasoning of standard models with a "Fact Assembly Line."
 
-## 2. IN-DEPTH TECHNICAL ANALYSIS
+## 2. FUNCTIONAL ANATOMY: STEP-BY-STEP
 
-### 2.1 Gated SAE Mechanics
-Standard SAEs suffer from "Feature Shrinkage" where small signals are crushed to zero by the L1 penalty. 
-- **The Solution**: Mecha Health uses **Gated SAEs**.
-- **The "Gate"**: A separate mathematical path that only asks: "Is this feature present? Yes/No." It uses a hard threshold to ignore background noise.
-- **The "Magnitude"**: If the gate is open, a second path estimates the *intensity* of the signal without being penalized by the L1 force.
-- **Complexity Explanation**: Think of a noise-canceling microphone. The gate stays closed for background chatter (noise) and only opens when someone speaks (pathology), ensuring the voice is recorded at its full, clear volume.
+### 2.1 The "Unpacking" Process (Forward Pass)
+1.  **Input (Dense Vector)**: The model receives a 768-dimensional vector from the Vision Transformer (ViT). This vector contains all image info but is a "jumbled mess" (Superposition).
+2.  **Projection (Up-Sampling)**: The SAE projects this 768-dim vector into a high-dimensional space (e.g., 32,768 dimensions).
+    - *Why*: In higher dimensions, overlapping concepts have "room" to spread out and become separate.
+3.  **Gating (The Decision)**: For each of the 32k dimensions, a mathematical "gate" determines if a specific clinical feature is active.
+    - *The Math*: $Gate(x) = 1$ if $W_{gate}x + b > \theta$, else $0$.
+4.  **Magnitude (The Intensity)**: If the gate is open, the model calculates the strength of that feature without bias.
+5.  **Output (Sparse Map)**: The result is a list where 99.9% of dimensions are ZERO, and only ~15 are ACTIVE.
 
-### 2.2 Automated Labeling (Teacher-Student Distillation)
-Mecha does not manually label neurons. It uses a Large Language Model (LLM) to "Student-Audit" the SAE.
-- **Process**: The system finds 100 images that strongly activate "Feature #1024." It retrieves the ground-truth reports for those 100 images.
-- **Distillation**: The LLM analyzes the commonality across these 100 reports and realizes that every time #1024 is ON, doctors mention "Pleural Effusion." It then hard-codes this label into the feature.
+### 2.2 The "Naming" Process (Automated Labeling)
+1.  **Collection**: The system identifies 50 scans that most strongly activate "Feature #1024."
+2.  **Retrieval**: It pulls the real human-written reports for those 50 scans.
+3.  **Distillation**: An LLM (Teacher) identifies the common clinical statement across all 50 reports (e.g., "Left-sided pleural effusion").
+4.  **Assignment**: The label "Left-sided pleural effusion" is permanently assigned to "Feature #1024."
 
 ## 3. SUMMARY
-The SAE-Rad Factory turns a black-box "guess" into a "fact assembly line." By disentangling the latent space and automating the labeling process, it creates a system that is 100% interpretable and resistant to the hallucination issues of standard LLMs.
+The SAE-Rad Factory ensures every diagnostic claim is a combination of pre-verified, monosemantic labels. It turns AI from "writing a story" into "picking the right labels from a box."
 
 ---
 *End of SAE-Rad Factory Skill.*
